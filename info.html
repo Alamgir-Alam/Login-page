@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .navbar {
+        color: #fff;
+        padding: 10px 0;
+    }
+    
+    .navbar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .card {
+        height: 70px;
+        width: 170px;
+        cursor: pointer;
+        background-color: ;
+    }
+    
+    .log {
+        text-decoration: none;
+        color: gray;
+        font-size: larger;
+    }
+    
+    .login {
+        display: flex;
+        align-items: center;
+    }
+    
+    .container {
+        height: auto;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    
+    }
+    
+    .email {
+        height: auto;
+        width: 450px;
+        border: 1px solid gray;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        border-radius: 10px;
+        margin-bottom: 20px; 
+        /* background-color: #18b797   ; */
+
+    }
+    
+    .fa-square-check {
+        font-size: 60px;
+    margin-right: 10px;
+        
+    }
+    
+    .point{
+        display: flex;
+        align-items: center;
+      
+    }
+    
+    
+    
+    
+    .mail {
+        color: rgb(24, 183, 151);
+    
+    }
+    
+    .fa-xmark {
+        font-size: 40px;
+        cursor: pointer;
+    }
+    
+    .cross {
+        height: auto;
+        width: auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: end;
+      /* background-color: #18b797;     */
+       margin-right: 10px;  
+    }
+    
+    .option{
+     font-size: large;
+    
+    }
+    
+    
+    
+    .individual{
+    
+        height: auto;
+        width: auto;
+        /* background-color: #18b797; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    #cars{
+        width: 400px;
+        height: 40px;
+        border-radius: 05px;
+        text-align: center;
+        /* background-color: #18b797;    */
+    
+    }
+    
+    .am{
+        margin-right: 10px;
+    
+    }
+    
+    .submit{
+        height: auto;
+        width: auto;
+         /* background-color: #18b797;  */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .onclick{
+        height: 30px;
+        width: 60px;
+        background-color: rgb(46, 122, 182);
+        border-radius: 05px;
+        color: white;
+        border: transparent;
+        cursor: pointer;
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        .navbar .container {
+            flex-direction: column;
+            padding: 10px; 
+        }
+    
+        .img-card {
+            margin-bottom: 10px; 
+        }
+    
+        .card {
+            height: auto; 
+            width: 100%; 
+        }
+    
+        .login {
+            margin-top: 10px; 
+        }
+    }
+    
+    .all{
+        width: auto;
+        height: auto;
+        /* background-color: #18b797; */
+    }
+    </style>
+    
+
+
+
+
+
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="img-card">
+                <img class="card" src="pic.png" alt="image" />
+            </div>
+            <div class="login">
+                <h5><a class="log" href="login.html">Login</a></h5>
+            </div>
+        </div>
+    </nav>
+<div class="all">
+    <div class="container">
+        <div class="flex">
+            <div class="email">
+                <div class="point">
+                    <i class="fa-solid fa-square-check" style="color: #18b797;"></i>
+                    <p class="mail">Verified Email</p>
+                </div>
+                <div class="cross" onclick="hideEmailSection()">
+                    <i class="fa-solid fa-xmark" style="color: #d0d0c7;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="individual">
+        <p class="am">I am</p>
+        <label class="option" for="cars"></label>
+        <select id="cars" name="cars">
+            <option value="Choose Profession">Choose Profession</option>
+            <option value="Individual Teacher">Individual Teacher</option>
+            <option value="Student">Student</option>
+        </select>
+    </div>
+
+    <div class="submit">
+        <button class="onclick" onclick="saveAndRedirect()">Submit</button>
+    </div>
+</div>
+
+    <script>
+        function hideEmailSection() {
+            var emailSection = document.querySelector('.email');
+            emailSection.style.display = 'none';
+        }
+
+        function saveAndRedirect() {
+            var selectedOption = document.getElementById('cars').value;
+            
+            // Save data to local storage
+            localStorage.setItem('selectedOption', selectedOption);
+            
+            // Show "Data Saved" message
+            var messageDiv = document.createElement('div');
+            messageDiv.textContent = 'Data saved';
+            messageDiv.style.position = 'fixed';
+            messageDiv.style.top = '60%';
+            messageDiv.style.left = '50%';
+            messageDiv.style.transform = 'translate(-50%, -50%)';
+            messageDiv.style.backgroundColor = '#f0f0f0';
+            messageDiv.style.padding = '20px';
+            messageDiv.style.border = '1px solid #ccc';
+            messageDiv.style.borderRadius = '5px';
+            messageDiv.style.color = 'white'
+            messageDiv.style.zIndex = '9999';
+            messageDiv.style.backgroundColor = 'green'
+       
+            document.body.appendChild(messageDiv);
+            
+            // Redirect after 2 seconds
+            setTimeout(function() {
+                window.location.href = 'basic-detail.htm';
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
+
+

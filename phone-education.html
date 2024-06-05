@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Detail</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .img-card {
+            display: flex; 
+        }
+
+        .card {
+            height: 70px;
+            width: 170px;
+            cursor: pointer;
+        }
+
+        .log {
+            text-decoration: none;
+            color: gray;
+            font-size: larger;
+        }
+
+        .login {
+            display: flex;
+            align-items: center;
+        }
+
+
+
+        /* Responsive styles */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .img-card {
+        margin-bottom: 10px; /* Add space below the logo/image */
+    }
+
+    .card {
+        height: auto; /* Allow the logo/image to resize */
+        width: 100%; /* Make the logo/image full width */
+    }
+
+    .login {
+        margin-top: 10px; /* Add space above the login section */
+    }
+}
+
+
+
+        .body {
+            width: auto;
+            height: auto;
+            /* background-color: rgb(125, 72, 7); */
+            display: flex;
+            justify-content: center;
+        }
+
+        .center {
+            height: auto;
+            width: 70%;
+            /* background-color:blueviolet; */
+            /* display: flex; */
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .phone {
+            height: 60px;
+            width: 100%;
+            /* background-color: #fff; */
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid rgb(217, 217, 217);
+            margin-bottom: 20px; /* Add margin for spacing between phone divs */
+        }
+
+        .check {
+            display: flex;
+            align-items: center;
+        }
+
+        .fa-square-check {
+            font-size: 70px;
+        }
+
+        .added {
+            color: rgb(79, 76, 75);
+            margin-left: 10px;
+        }
+
+        .cross {
+            margin-right: 10px;
+        }
+
+        .fa-xmark {
+            font-size: 20px;
+            cursor: pointer;
+            color: #cbcbcb;
+        }
+
+
+        .textteach{
+            height: auto;
+            width: auto;
+            display: flex;
+            align-items: center;
+            /* background-color: #16b896; */
+            text-align: center;
+        }
+
+        .youteach{
+            color: rgb(79, 76, 75);
+            margin-right: 15px;
+            font-size: x-large;
+            
+         
+        }
+
+        .color{
+            color: rgb(145, 166, 190);
+            font-size: larger;
+        }
+      
+        .one{
+            color: rgb(79, 76, 75);
+        }
+
+        .subject{
+            height: auto;
+            width: auto;
+            /* background-color: #16b896; */
+            margin-top: 20px;
+
+
+        }
+        #cars{
+            height: 40px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .level{
+            height: auto;
+            width: auto;
+            /* background-color: #16b896; */
+            margin-top: 20px;
+        }
+
+
+
+
+        #beg{
+            height: 40px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .from{
+            color: rgb(79, 76, 75);
+        }
+
+
+
+
+
+        .tolevel{
+            height: auto;
+            width: auto;
+            /* background-color: #16b896; */
+            margin-top: 20px;
+
+        }
+
+
+        #endto{
+            height: 40px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+
+        .submit{
+            height: auto;
+            width: auto;
+            margin-top: 10px;
+
+        }
+
+        .button{
+            height: 30px;
+            width: 60px;
+            background-color: rgb(52, 122, 182);
+            color: white;
+            border: transparent;
+            cursor: pointer;
+        }
+
+       
+    </style>
+
+</head>
+<body>
+    
+<nav class="navbar">
+    <div class="container">
+        <div class="img-card">
+            <img class="card" src="pic.png" alt="image" />
+        </div>
+        <div class="login">
+            <h5><a class="log" href="login.html">Login</a></h5>
+        </div>
+    </div>
+</nav>
+
+<div class="body">
+    <div class="center">
+        <div class="phone" id="phone1">
+            <div class="check">
+                <i class="fa-solid fa-square-check" style="color: #16b896;"></i>
+                <p class="added">Phone added</p>
+            </div>
+            <div class="cross" onclick="hidePhone('phone1')">
+                <i class="fa-solid fa-xmark"></i><br>
+
+            </div>
+        </div>
+
+
+        <div class="textteach">
+
+        <P class="youteach"> Subject  You Teach </P> <p class="color"> Add a subject</p>
+    </div>
+
+    <div class="subject">
+        <p class="one">Subject (One at a time )</p>
+
+        <select id="cars" name="cars">
+            <option value="English & Personality Development">English & Personality Development</option>
+            <option value="data">data</option>
+            <option value="data">data</option>
+          </select>
+    </div>
+
+    <div class="level">
+
+        <p class="from"> From Level </p>
+
+        <select id="beg" name="beg">
+        <option value="Grade1">Grade 1</option>
+        <option value="Grade2">Grade 2</option>
+        <option value="Grade2">Grade 3</option>
+        <option value="Grade3">Grade 4</option>
+        <option value="Grade4">Grade 5</option>
+        </select>
+
+    </div>
+
+
+
+    <div class="tolevel">
+
+        <p class="from"> To Level </p>
+
+        <select id="endto" name="endto">
+        <option value="Bachelors/Undergraduate">Bachelors/Undergraduate</option>
+        <option value="Grade2">Grade 2</option>
+        <option value="Grade2">Grade 3</option>
+        <option value="Grade3">Grade 4</option>
+        <option value="Grade4">Grade 5</option>
+        </select>
+    </div>
+
+    <div class="submit">
+        <button id="saveButton" class="button" onclick="saveData()">Save</button>
+    </div>
+    </div>
+</div>
+
+<script>
+    function hidePhone(phoneId) {
+        var phoneDiv = document.getElementById(phoneId);
+        phoneDiv.style.display = 'none';
+    }
+</script>
+
+
+
+<script>
+     function saveData() {
+        // Retrieve values from the form fields
+        var subject = document.getElementById('cars').value;
+        var fromLevel = document.getElementById('beg').value;
+        var toLevel = document.getElementById('endto').value;
+
+        // Prepare data object to store in local storage
+        var data = {
+            subject: subject,
+            fromLevel: fromLevel,
+            toLevel: toLevel
+        };
+
+        // Save data to local storage
+        localStorage.setItem('savedData', JSON.stringify(data));
+
+        // Show confirmation message
+        console.log('Data Saved');
+        showMessage();
+
+        // Navigate to another page after 2 seconds
+        setTimeout(function() {
+            window.location.href = 'loginprofile.html';
+        }, 2000);
+    }
+
+    function showMessage() {
+        // Show a message (you can customize this as per your design)
+        var messageDiv = document.createElement('div');
+        messageDiv.textContent = 'Data Saved';
+        messageDiv.style.backgroundColor = '#4CAF50';
+        messageDiv.style.color = 'white';
+        messageDiv.style.padding = '10px';
+        messageDiv.style.position = 'fixed';
+        messageDiv.style.top = '300px';
+        messageDiv.style.left = '50%';
+        messageDiv.style.transform = 'translateX(-50%)';
+        messageDiv.style.borderRadius = '5px';
+        messageDiv.style.zIndex = '9999';
+        document.body.appendChild(messageDiv);
+
+        // Hide the message after 2 seconds
+        setTimeout(function() {
+            messageDiv.style.display = 'none';
+        }, 2000);
+    }
+</script>
+
+</body>
+</html>

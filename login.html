@@ -1,0 +1,218 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Login Form</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <style>
+     body {
+       font-family: Arial, sans-serif;
+       margin: 0;
+       padding: 0;
+       background-color: #f4f4f4;
+     }
+     .container {
+       width: 350px;
+       margin: 100px auto;
+       background-color: #fff;
+       border-radius: 5px;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     }
+     .container-wrap {
+       padding: 40px;
+     }
+     .img-card {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+     }
+     .hello {
+       text-align: center;
+     }
+     .input-group {
+       margin-bottom: 05px;
+     }
+     .input-group label {
+       font-weight: bold;
+       display: block;
+       margin-bottom: 5px;
+     }
+     .input-group input {
+       width: 100%;
+       padding: 10px;
+       border: 1px solid #ccc;
+       border-radius: 5px;
+       box-sizing: border-box; /* Ensure padding is included in width calculation */
+     }
+     .icon {
+       position: relative;
+       display: flex;
+       align-items: center;
+       justify-content: flex-end;
+     }
+     .icon i {
+       position: absolute;
+       right: 10px;
+       cursor: pointer;
+     }
+     .value {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       
+       /* background-color: #0056b3; */
+       
+     }
+     .remember-me {
+       display: flex;
+       align-items: center;
+      
+     }
+     .forget-password {
+       margin-left: auto;
+     }
+     .btn {
+       width: 100%;
+       padding: 10px;
+       border: none;
+       background-color: #007bff;
+       color: #fff;
+       border-radius: 20px;
+       cursor: pointer;
+       margin-top: 20px;
+     }
+     .btn:hover {
+       background-color: #0056b3;
+     }
+     .sign-up {
+       text-align: center;
+       margin-top: 20px;
+     }
+     .line {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       margin-top: 20px;
+     }
+     .textlast {
+       text-decoration: none;
+       color: rgb(146, 144, 145);
+       margin-left: 10px;
+     }
+     .pass {
+       color: rgb(146, 144, 145);
+       text-decoration: none;
+     }
+
+     .fa-facebook{
+      font-size: 30px;
+     }
+
+     .fa-google-plus{
+      font-size: 30px;
+     }
+
+   </style>
+ </head>
+ <body>
+   <div class="container">
+     <div class="container-wrap">
+       <div class="img-card">
+         <img src="pic.png" alt="image" />
+       </div>
+       <h2 class="hello">Login</h2>
+       <form id="loginForm" action="#">
+         <div class="input-group">
+           <label for="username">User Name</label>
+           <input type="text" id="username" name="username" required />
+         </div>
+ 
+         <div class="input-group">
+           <label for="password">Password</label>
+           <div class="icon">
+             <input type="password" id="password" name="password" required />
+             <i class="fas fa-eye fa-solid" onclick="togglePasswordVisibility('password')"></i>
+           </div>
+         </div>
+       
+ 
+         <div class="value">
+           <div class="remember-me">
+             <input type="checkbox" id="remember" name="remember" />
+             <label for="remember">Remember Me</label>
+           </div>
+           <div class="forget-password">
+             <a class="pass" href="forget.html">Forget Password?</a>
+           </div>
+         </div>
+ 
+         <button type="submit" class="btn">Login</button>
+       </form>
+ 
+       <div class="sign-up">
+         <h3>OR</h3>
+         <i class="fab fa-facebook" style="color: #09369f"></i>
+         <i class="fab fa-google-plus" style="color: #d8523d"></i>
+         
+       </div>
+ 
+       <div class="line">
+         <span>Don’t have an account?</span>
+         <a class="textlast" href="page.html">Sign Up</a>
+       </div>
+     </div>
+   </div>
+ 
+   <script>
+     // Function to toggle password visibility
+     function togglePasswordVisibility(inputId) {
+       const passwordInput = document.getElementById(inputId);
+       const icon = passwordInput.nextElementSibling;
+       if (passwordInput.type === "password") {
+         passwordInput.type = "text";
+         icon.classList.remove("fa-eye");
+         icon.classList.add("fa-eye-slash");
+       } else {
+         passwordInput.type = "password";
+         icon.classList.remove("fa-eye-slash");
+         icon.classList.add("fa-eye");
+       }
+     }
+ 
+     // Check if Remember Me is enabled and populate username
+     const rememberMeCheckbox = document.getElementById('remember');
+     const usernameInput = document.getElementById('username');
+ 
+     rememberMeCheckbox.addEventListener('change', function() {
+       if (this.checked) {
+         localStorage.setItem('rememberMe', 'true');
+         localStorage.setItem('username', usernameInput.value);
+       } else {
+         localStorage.removeItem('rememberMe');
+         localStorage.removeItem('username');
+       }
+     });
+ 
+     // On page load, check if Remember Me was enabled
+     window.addEventListener('load', function() {
+       const rememberMe = localStorage.getItem('rememberMe');
+       if (rememberMe === 'true') {
+         rememberMeCheckbox.checked = true;
+         const savedUsername = localStorage.getItem('username');
+         if (savedUsername) {
+           usernameInput.value = savedUsername;
+         }
+       }
+     });
+   </script>
+ </body>
+ </html>
+ 
+
+ 
+
+
+
+

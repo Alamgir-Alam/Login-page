@@ -1,0 +1,718 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Detail</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            /* background-color: #333; */
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px; /* Add padding to the container */
+        }
+
+        .img-card {
+            display: flex; 
+        }
+
+        .card {
+            height: 70px;
+            width: 170px;
+            cursor: pointer;
+        }
+
+        .log {
+            text-decoration: none;
+            color: gray;
+            font-size: larger;
+        }
+
+        .login {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .navbar .container {
+                flex-direction: column;
+                padding: 10px; /* Adjust padding for smaller screens */
+            }
+
+            .img-card {
+                margin-bottom: 10px; /* Add space below the logo/image */
+            }
+
+            .card {
+                height: auto; /* Allow the logo/image to resize */
+                width: 100%; /* Make the logo/image full width */
+            }
+
+            .login {
+                margin-top: 10px; /* Add space above the login section */
+            }
+        }
+
+        .box {
+            height: auto;
+            width: auto;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .center {
+            height: auto;
+            width: 65%;
+            padding: 20px;
+        }
+
+        .check {
+            height: 60px;
+            width: 100%;
+            border: 1px solid rgb(224, 224, 224);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 10px;
+        }
+
+        .logo {
+            height: auto;
+            width: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .fa-square-check {
+            font-size: 67px;
+        }
+
+        .detail {
+            margin-left: 10px;
+            font-size: large;
+            color: rgb(123, 107, 110);
+        }
+
+        .cross {
+            height: auto;
+            width: auto;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .profile {
+            width: auto;
+            height: auto;
+            padding: 30px;
+        }
+
+        .description {
+            font-size: x-large;
+            color: rgb(123, 107, 110);
+        }
+
+        .most {
+            font-size: medium;
+            color: rgb(162, 161, 171);
+        }
+
+        .student {
+            color: rgb(123, 107, 110);
+        }
+
+        .make {
+            color: rgb(162, 161, 171);
+        }
+
+        .bold {
+            color: rgb(123, 107, 110);
+        }
+
+        .input {
+            height: 200px;
+            width: 91%;
+            margin-left: 25px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .cardhere{
+            height: auto;
+            width: auto;
+            padding: 20px;
+            margin-left: 10px;
+            display: flex;
+            margin-top: 30px;
+        }
+
+        #remember {
+            color: rgb(162, 161, 171);
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .shared {
+            font-size: medium;
+        }
+
+        .create {
+            height: auto;
+            width: auto;
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+
+        .around {
+            background-color: rgb(52, 122, 182);
+            color: white;
+            border: transparent;
+            height: 30px;
+            width: 50px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Message styling */
+        .message-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: none; /* Initially hidden */
+            z-index: 1000; /* Ensure it's on top */
+        }
+    </style>
+
+</head>
+<body>
+    
+<nav class="navbar">
+    <div class="container">
+        <div class="img-card">
+            <img class="card" src="pic.png" alt="image" />
+        </div>
+        <div class="login">
+            <h5><a class="log" href="login.html">Login</a></h5>
+        </div>
+    </div>
+</nav>
+
+<div class="box">
+    <div class="center">
+        <div class="check" id="savedMessage">
+            <div class="logo">
+                <i class="fa-solid fa-square-check" style="color: #16b896;"></i>
+                <p class="detail">Teaching Detail Saved</p>
+            </div>
+            <div class="cross" onclick="hideMessage()">
+                <i class="fa-solid fa-xmark" style="color: #cbcbcb;"></i>
+            </div>
+        </div>
+        <div class="profile">
+            <p class="description">Profile description </p>
+            <br>
+            <p class="most">This is the most important section for you </p>
+            <br>
+            <p class="student">80% of student will decide if they want to hire you just based on what you write here. </p>
+            <p class="make">Make sure it's  good, relevant, in details, and without mistakes.</p>
+            <p class="make">Do not copy-resume here.</p>
+            <p class="bold">Do not share any contact details.</p>
+        </div>
+        <div class="input">
+            <textarea id="myTextarea" name="myTextarea" placeholder="Enter your text here..."></textarea>
+            <div id="wordCountMessage" style="margin-top: 10px;"></div>
+        </div>
+        <div class="cardhere">
+            <input type="checkbox" id="remember" name="remember" />
+            <p class="shared">I have not shared any contact details (Email, Phone, Skype, Website)</p>
+        </div>
+        <div class="create">
+            <button class="around" onclick="saveAndShowMessage()">Save</button>
+        </div>
+    </div>
+</div>
+
+<div class="message-container" id="messageContainer">
+    <p>Data saved!</p>
+</div>
+
+
+
+
+<script>
+    function hideMessage() {
+        var messageDiv = document.getElementById('savedMessage');
+        messageDiv.style.display = 'none';
+    }
+
+    function saveAndShowMessage() {
+        var text = document.getElementById('myTextarea').value;
+        var wordCount = countWords(text);
+
+        // Check if word count meets the minimum requirement (300 words)
+        if (wordCount < 300) {
+            alert('Please enter at least 300 words.');
+            return;
+        }
+
+        // Save to local storage
+        localStorage.setItem('savedText', text);
+
+        // Show message
+        var messageContainer = document.getElementById('messageContainer');
+        messageContainer.style.display = 'block';
+
+        // Hide message after 2 seconds
+        setTimeout(function() {
+            messageContainer.style.display = 'none';
+            // Navigate to another page (for demonstration purposes, navigate to index.html)
+            window.location.href = 'index.html';
+        }, 2000);
+    }
+
+    function countWords(text) {
+        // Remove extra whitespaces and split the text into words
+        var cleanText = text.trim().replace(/\s+/g, ' ');
+        var wordArray = cleanText.split(' ');
+        return wordArray.length;
+    }
+
+    // Optional: Display word count message
+    var textarea = document.getElementById('myTextarea');
+    textarea.addEventListener('input', function() {
+        var text = this.value;
+        var wordCount = countWords(text);
+        var wordCountMessage = document.getElementById('wordCountMessage');
+        wordCountMessage.textContent = `Word count: ${wordCount}`;
+    });
+</script>
+
+<script>
+    function hideMessage() {
+        var messageDiv = document.getElementById('savedMessage');
+        messageDiv.style.display = 'none';
+    }
+
+    function saveAndShowMessage() {
+        var text = document.getElementById('myTextarea').value;
+        var wordCount = countWords(text);
+
+        // Check if word count meets the minimum requirement (300 words)
+        if (wordCount < 300) {
+            // Show message below the textarea
+            var wordCountMessage = document.getElementById('wordCountMessage');
+            wordCountMessage.textContent = 'Minimum 300 words required.';
+            wordCountMessage.style.color = 'red'; // Optionally change text color for emphasis
+            return; // Exit function if validation fails
+        }
+
+        // Save to local storage
+        localStorage.setItem('savedText', text);
+
+        // Show message
+        var messageContainer = document.getElementById('messageContainer');
+        messageContainer.style.display = 'block';
+
+        // Hide message after 2 seconds
+        setTimeout(function() {
+            messageContainer.style.display = 'none';
+            // Navigate to another page (for demonstration purposes, navigate to index.html)
+            window.location.href = 'index.html';
+        }, 2000);
+    }
+
+    function countWords(text) {
+        // Remove extra whitespaces and split the text into words
+        var cleanText = text.trim().replace(/\s+/g, ' ');
+        var wordArray = cleanText.split(' ');
+        return wordArray.length;
+    }
+
+    // Display word count message dynamically
+    var textarea = document.getElementById('myTextarea');
+    textarea.addEventListener('input', function() {
+        var text = this.value;
+        var wordCount = countWords(text);
+        var wordCountMessage = document.getElementById('wordCountMessage');
+        
+        // Update word count message
+        if (wordCount < 300) {
+            wordCountMessage.textContent = `Word count: ${wordCount} (Minimum 300 words required)`;
+            wordCountMessage.style.color = 'red'; // Change text color for emphasis
+        } else {
+            wordCountMessage.textContent = `Word count: ${wordCount}`;
+            wordCountMessage.style.color = 'initial'; // Reset text color if valid
+        }
+    });
+</script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Detail</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            /* background-color: #333; */
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px; /* Add padding to the container */
+        }
+
+        .img-card {
+            display: flex; 
+        }
+
+        .card {
+            height: 70px;
+            width: 170px;
+            cursor: pointer;
+        }
+
+        .log {
+            text-decoration: none;
+            color: gray;
+            font-size: larger;
+        }
+
+        .login {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .navbar .container {
+                flex-direction: column;
+                padding: 10px; /* Adjust padding for smaller screens */
+            }
+
+            .img-card {
+                margin-bottom: 10px; /* Add space below the logo/image */
+            }
+
+            .card {
+                height: auto; /* Allow the logo/image to resize */
+                width: 100%; /* Make the logo/image full width */
+            }
+
+            .login {
+                margin-top: 10px; /* Add space above the login section */
+            }
+        }
+
+        .box {
+            height: auto;
+            width: auto;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .center {
+            height: auto;
+            width: 65%;
+            padding: 20px;
+        }
+
+        .check {
+            height: 60px;
+            width: 100%;
+            border: 1px solid rgb(224, 224, 224);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 10px;
+        }
+
+        .logo {
+            height: auto;
+            width: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .fa-square-check {
+            font-size: 67px;
+        }
+
+        .detail {
+            margin-left: 10px;
+            font-size: large;
+            color: rgb(123, 107, 110);
+        }
+
+        .cross {
+            height: auto;
+            width: auto;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .profile {
+            width: auto;
+            height: auto;
+            padding: 30px;
+        }
+
+        .description {
+            font-size: x-large;
+            color: rgb(123, 107, 110);
+        }
+
+        .most {
+            font-size: medium;
+            color: rgb(162, 161, 171);
+        }
+
+        .student {
+            color: rgb(123, 107, 110);
+        }
+
+        .make {
+            color: rgb(162, 161, 171);
+        }
+
+        .bold {
+            color: rgb(123, 107, 110);
+        }
+
+        .input {
+            height: 200px;
+            width: 91%;
+            margin-left: 25px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .cardhere{
+            height: auto;
+            width: auto;
+            padding: 20px;
+            margin-left: 10px;
+            display: flex;
+            margin-top: 30px;
+        }
+
+        #remember {
+            color: rgb(162, 161, 171);
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .shared {
+            font-size: medium;
+        }
+
+        .create {
+            height: auto;
+            width: auto;
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+
+        .around {
+            background-color: rgb(52, 122, 182);
+            color: white;
+            border: transparent;
+            height: 30px;
+            width: 50px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Message styling */
+        .message-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: none; /* Initially hidden */
+            z-index: 1000; /* Ensure it's on top */
+        }
+    </style>
+
+</head>
+<body>
+    
+<nav class="navbar">
+    <div class="container">
+        <div class="img-card">
+            <img class="card" src="pic.png" alt="image" />
+        </div>
+        <div class="login">
+            <h5><a class="log" href="login.html">Login</a></h5>
+        </div>
+    </div>
+</nav>
+
+<div class="box">
+    <div class="center">
+        <div class="check" id="savedMessage">
+            <div class="logo">
+                <i class="fa-solid fa-square-check" style="color: #16b896;"></i>
+                <p class="detail">Teaching Detail Saved</p>
+            </div>
+            <div class="cross" onclick="hideMessage()">
+                <i class="fa-solid fa-xmark" style="color: #cbcbcb;"></i>
+            </div>
+        </div>
+        <div class="profile">
+            <p class="description">Profile description </p>
+            <br>
+            <p class="most">This is the most important section for you </p>
+            <br>
+            <p class="student">80% of student will decide if they want to hire you just based on what you write here. </p>
+            <p class="make">Make sure it's  good, relevant, in details, and without mistakes.</p>
+            <p class="make">Do not copy-resume here.</p>
+            <p class="bold">Do not share any contact details.</p>
+        </div>
+        <div class="input">
+            <textarea id="myTextarea" name="myTextarea" placeholder="Enter your text here..."></textarea>
+            <div id="wordCountMessage" style="margin-top: 10px;"></div>
+        </div>
+        <div class="cardhere">
+            <input type="checkbox" id="remember" name="remember" />
+            <p class="shared">I have not shared any contact details (Email, Phone, Skype, Website)</p>
+        </div>
+        <div class="create">
+            <button class="around" onclick="saveAndShowMessage()">Save</button>
+        </div>
+    </div>
+</div>
+
+<div class="message-container" id="messageContainer">
+    <p>Data saved!</p>
+</div>
+
+<script>
+    function hideMessage() {
+        var messageDiv = document.getElementById('savedMessage');
+        messageDiv.style.display = 'none';
+    }
+
+    function saveAndShowMessage() {
+        var text = document.getElementById('myTextarea').value;
+        var wordCount = countWords(text);
+
+        // Check if word count meets the minimum requirement (300 words)
+        if (wordCount < 300) {
+            // Show message below the textarea
+            var wordCountMessage = document.getElementById('wordCountMessage');
+            wordCountMessage.textContent = 'Minimum 300 words required.';
+            wordCountMessage.style.color = 'red'; // Optionally change text color for emphasis
+            return; // Exit function if validation fails
+        }
+
+        // Save to local storage
+        localStorage.setItem('savedText', text);
+
+        // Show message
+        var messageContainer = document.getElementById('messageContainer');
+        messageContainer.style.display = 'block';
+
+        // Hide message after 2 seconds
+        setTimeout(function() {
+            messageContainer.style.display = 'none';
+            // Navigate to another page (for demonstration purposes, navigate to index.html)
+            window.location.href = 'id-proof.html';
+        }, 2000);
+    }
+
+    function countWords(text) {
+        // Remove extra whitespaces and split the text into words
+        var cleanText = text.trim().replace(/\s+/g, ' ');
+        var wordArray = cleanText.split(' ');
+        return wordArray.length;
+    }
+
+    // Display word count message dynamically
+    var textarea = document.getElementById('myTextarea');
+    textarea.addEventListener('input', function() {
+        var text = this.value;
+        var wordCount = countWords(text);
+        var wordCountMessage = document.getElementById('wordCountMessage');
+        
+        // Update word count message
+        if (wordCount < 300) {
+            wordCountMessage.textContent = `Word count: ${wordCount} (Minimum 300 words required)`;
+            wordCountMessage.style.color = 'red'; // Change text color for emphasis
+        } else {
+            wordCountMessage.textContent = `Word count: ${wordCount}`;
+            wordCountMessage.style.color = 'initial'; // Reset text color if valid
+        }
+    });
+</script>
+
+</body>
+</html>

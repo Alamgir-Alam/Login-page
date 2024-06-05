@@ -1,0 +1,403 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .img-card {
+            display: flex; 
+        }
+
+        .card {
+            height: 70px;
+            width: 170px;
+            cursor: pointer;
+        }
+
+        .log {
+            text-decoration: none;
+            color: gray;
+            font-size: larger;
+        }
+
+        .login {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .navbar .container {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .img-card {
+                margin-bottom: 10px;
+            }
+
+            .card {
+                height: auto;
+                width: 100%;
+            }
+
+            .login {
+                margin-top: 10px;
+            }
+        }
+
+        .address {
+            margin-top: 20px;
+            height: auto;
+            width: auto;
+            /* background-color: grey; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title {
+            height: auto;
+            width: 60%;
+            /* background-color: bisque; */
+            padding: 10px;
+            margin: 0px;
+        }
+
+        .update {
+            height: 65px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            justify-content: space-between;
+            margin-top: 10px;
+            border: 1px solid gray;
+            border-radius: 10px;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            width: auto;
+        }
+
+        .text {
+            margin-left: 5px;
+        }
+
+        .fa-square-check {
+            font-size: 75px;
+        }
+
+        .cross {
+            height: auto;
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .fa-xmark {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .publicly {
+            height: auto;
+            width: auto;
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .font {
+            font-size: x-large;
+            color: rgb(85, 83, 81);
+        }
+
+        .viible {
+            color: rgb(203, 203, 203);
+            margin-left: 10px;
+        }
+
+        .notification {
+            margin-top: 10px;
+            height: auto;
+            width: 100%;
+            background-color: rgb(217, 237, 247);
+        }
+
+        .local {
+            height: auto;
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .fa-circle-info {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .complete {
+            height: auto;
+            width: 80%;
+            display: flex;
+            justify-content: space-evenly;
+            justify-content: flex-start;
+            padding: 10px;
+        }
+
+        .area {
+            color: rgb(90, 117, 144);
+        }
+
+        .fa-skull-crossbones {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .your {
+            color: red;
+        }
+
+        .location {
+            margin-top: 30px;
+            height: auto;
+            width: 100%;
+            /* background-color: #1ab699; */
+            padding: 10px;
+        }
+
+        .plus {
+            height: 30px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .view {
+            height: 30px;
+            width: 60px;
+            background-color: rgb(45, 113, 148);
+            border: transparent;
+            color: white;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .message {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #4caf50;  
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .delete {
+            display: none;
+            height: 40px;
+            width: 130px;
+            background-color: rgb(52, 122, 182);
+            border: transparent;
+            color: white;
+            margin-top: 10px;
+            cursor: pointer;
+           
+        }
+        .confirmwe{
+            height: auto;
+            width: auto;
+            margin-left: 10px;
+        }
+
+        .safe{
+            background-color: rgb(52, 122, 182);
+            border: transparent;
+            color: white;
+            height: 30px;
+            width: 60px;
+            border-radius: 05px;
+            cursor: pointer;
+
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="img-card">
+                <img class="card" src="pic.png" alt="image" />
+            </div>
+            <div class="login">
+                <h5><a class="log" href="login.html">Login</a></h5>
+            </div>
+        </div>
+    </nav>
+
+    <div class="address"> 
+        <div class="title">
+            <div class="update" id="update-section">
+                <div class="logo">
+                    <i class="fa-solid fa-square-check" style="color: #1ab699;"></i>
+                    <p class="text">Personal details updated</p> 
+                </div>
+                <div class="cross" id="close-update">
+                    <i class="fa-solid fa-xmark" style="color: #cbcbcb;"></i>
+                </div>
+            </div>
+
+            <div class="publicly">
+                <p class="font">Address</p>
+                <p class="viible">(Publicly Visible)</p>
+            </div>
+
+            <div class="notification">
+                <div class="local">
+                    <i class="fa-solid fa-circle-info" style="color: #2d7194;"></i>
+                    <p class="area">This address is publicly visible. Please give your local area/society so students know your approximate location.</p>
+                </div>
+
+                <div class="complete">
+                    <i class="fa-solid fa-skull-crossbones" style="color: #af0e26;"></i>
+                    <p class="your">For your safety, do not give the complete address.</p>
+                </div>
+            </div>
+
+            <div class="location">
+                <p class="locate">Location</p>
+                <input class="plus" type="text" id="location-input">
+                <button class="view" id="submit-location">Submit</button>
+             
+                <p class="display-location" id="display-location"></p>
+                <button class="delete" id="delete-location">Change Location</button>
+            </div>
+
+            <div class="confirmwe">
+                <!-- Initially hidden save button -->
+                <button class="safe" id="save-button" style="display: none;">Save</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="message" id="location-message">Location saved!</div>
+
+    <script>
+        document.getElementById('close-update').addEventListener('click', function() {
+            document.getElementById('update-section').style.display = 'none';
+        });
+
+        document.getElementById('submit-location').addEventListener('click', function() {
+            const locationInput = document.getElementById('location-input');
+            const displayLocation = document.getElementById('display-location');
+            const locationMessage = document.getElementById('location-message');
+            const deleteButton = document.getElementById('delete-location');
+            const saveButton = document.getElementById('save-button'); // Added
+
+            // Get the value from the input field
+            const locationText = locationInput.value;
+
+            if (locationText) {
+                // Display the location text on the screen
+                displayLocation.textContent = locationText;
+                displayLocation.style.display = 'block';
+
+                // Save the location text to local storage
+                localStorage.setItem('location', locationText);
+
+                // Hide the input and submit button, show the delete button and save button
+                locationInput.style.display = 'none';
+                document.getElementById('submit-location').style.display = 'none';
+                deleteButton.style.display = 'block';
+                saveButton.style.display = 'block'; // Show the save button
+
+                // Show the location saved message
+                locationMessage.style.display = 'block';
+
+                // Hide the message after 2 seconds
+                setTimeout(function() {
+                    locationMessage.style.display = 'none';
+                }, 1000);
+            }
+        });
+
+        document.getElementById('save-button').addEventListener('click', function() {
+            // Redirect to another page (replace 'other_page.html' with your actual destination)
+            window.location.href = 'phone-education.html';
+        });
+
+        document.getElementById('delete-location').addEventListener('click', function() {
+            const locationInput = document.getElementById('location-input');
+            const displayLocation = document.getElementById('display-location');
+            const deleteButton = document.getElementById('delete-location');
+            const saveButton = document.getElementById('save-button'); // Added
+
+            // Remove the location from local storage
+            localStorage.removeItem('location');
+
+            // Hide the displayed location and save button
+            displayLocation.style.display = 'none';
+            saveButton.style.display = 'none'; // Hide the save button
+
+            // Unhide the input and submit button, hide the delete button
+            locationInput.style.display = 'block';
+            document.getElementById('submit-location').style.display = 'block';
+            deleteButton.style.display = 'none';
+        });
+
+        // On page load, check if a location is saved in local storage
+        window.onload = function() {
+            const savedLocation = localStorage.getItem('location');
+            const locationInput = document.getElementById('location-input');
+            const displayLocation = document.getElementById('display-location');
+            const deleteButton = document.getElementById('delete-location');
+            const saveButton = document.getElementById('save-button'); // Added
+
+            if (savedLocation) {
+                // Display the saved location and hide the input and submit button
+                displayLocation.textContent = savedLocation;
+                displayLocation.style.display = 'block';
+                locationInput.style.display = 'none';
+                document.getElementById('submit-location').style.display = 'none';
+                deleteButton.style.display = 'block';
+                saveButton.style.display = 'block'; // Show the save button
+            }
+        };
+    </script>
+</body>
+</html>

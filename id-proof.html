@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.id {
+  height: auto;
+  width: auto;
+}
+
+.proof {
+  height: auto;
+  width: 50%;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+.first {
+  font-size: larger;
+  margin-bottom: 10px;
+  color: rgb(143, 157, 172);
+}
+
+.cnic {
+  height: auto;
+  width: auto;
+  margin-top: 20px;
+}
+
+#documentSelect {
+  width: 70%;
+  height: 30px;
+  display: flex;
+  text-align: center;
+}
+
+.type {
+  font-size: medium;
+  margin-bottom: 10px;
+}
+
+.picture {
+  height: auto;
+  width: auto;
+  margin-top: 20px;
+}
+
+.delete {
+  background-color: rgb(225, 106, 95);
+  color: white;
+  height: 20px;
+  width: 60px;
+  border: transparent;
+  cursor: pointer;
+}
+
+#value {
+  height: 25px;
+  width: 50%;
+}
+
+.post {
+  height: 40px;
+  width: 70%;
+  border: 0.5px solid gray;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.files {
+  height: 25px;
+  width: 120px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.class {
+  height: auto;
+  width: auto;
+  margin-top: 20px;
+}
+
+.photo {
+  height: auto;
+  width: auto;
+}
+
+.view {
+  background-color: rgb(52, 121, 185);
+  color: white;
+  border: transparent;
+  height: 20px;
+  width: 120px;
+  cursor: pointer;
+}
+
+.submit {
+  background-color: rgb(52, 121, 185);
+  color: white;
+  border: transparent;
+  height: 20px;
+  width: 120px;
+  cursor: pointer;
+}
+
+  </style>
+
+</head>
+<body>
+  <div class="id">
+    <div class="proof">
+      <div class="uploade">
+        <p class="first">Upload ID Proof</p>
+        <p>Please upload proof for the following:</p>
+        <p>- You are a citizen of Pakistan OR</p>
+        <p>- You are in Pakistan</p>
+      </div>
+      <div class="cnic">
+        <p class="type">Document Type</p>
+        <select id="documentSelect" class="fruit" name="fruits">
+          <option value="">--Please choose an option--</option>
+          <option value="CNIC">CNIC</option>
+          <option value="passport">Passport</option>
+          <option value="proof">Other Identity Proof</option>
+        </select>
+      </div>
+      <div class="picture">
+        <input id="value" type="file">
+        <button id="deleteButton" class="delete">Delete</button>
+      </div>
+    
+      <div class="class">
+        <p>Upload Photo</p>
+        <br>
+        <p>Please upload a clear picture of yourself with your ID proof in your hand.</p>
+        <br>
+        <img class="card" src="img.jpeg" alt="image" />
+      </div>
+      <div class="photo">
+        <input id="photoInput" type="file">
+        <button id="uploadPhotoButton" class="view">Upload Photo</button>
+        <br><br>
+        <form id="reviewForm" action="confirmation.html">
+          <button id="submitReviewButton" class="submit" type="submit">Submit Review</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Function to handle form submission
+document.getElementById('reviewForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent default form submission
+
+  // Validate form fields
+  const documentType = document.getElementById('documentSelect').value;
+  const uploadedFile = document.getElementById('value').files[0];
+  const uploadedPhoto = document.getElementById('photoInput').files[0];
+
+  if (!documentType) {
+    alert('Please select a document type.');
+    return;
+  }
+
+  if (!uploadedFile) {
+    alert('Please upload an ID proof.');
+    return;
+  }
+
+  if (!uploadedPhoto) {
+    alert('Please upload a photo.');
+    return;
+  }
+
+  // If all validations pass, submit the form
+  this.submit(); // This submits the form to nextpage.html
+});
+
+// Function to handle deleting file input value
+document.getElementById('deleteButton').addEventListener('click', function() {
+  document.getElementById('value').value = '';
+});
+
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

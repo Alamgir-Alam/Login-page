@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Detail</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file for styling -->
+
+
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.card {
+    height: 70px;
+    width: 170px;
+    cursor: pointer;
+}
+
+.log {
+    text-decoration: none;
+    color: gray;
+    font-size: larger;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+}
+
+.basic {
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail {
+    height: auto;
+    width: 50%;
+    padding: 20px;
+}
+
+.basicdetail {
+    font-size: x-large;
+    color: rgb(68, 68, 62);
+}
+
+.speciality {
+    margin-top: 20px;
+}
+
+.strength {
+    color: rgb(68, 68, 62);
+}
+
+.value {
+    width: 90%;
+    height: 30px;
+    margin-top: 5px;
+    background-color: rgb(240, 254, 239);
+}
+
+.gender {
+    height: auto;
+    width: auto;
+    margin-top: 20px;
+}
+
+.fruit {
+    width: 90%;
+    height: 30px;
+    margin-top: 5px;
+    cursor: pointer;
+    background-color: rgb(240, 254, 239);
+}
+
+.date {
+    height: auto;
+    width: auto;
+    margin-top: 20px;
+}
+
+.birth {
+    width: 90%;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.submit {
+    height: 30px;
+    width: 70px;
+    background-color: rgb(53, 121, 183);
+    color: white;
+    border: transparent;
+    margin-top: 15px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+</style>
+
+
+
+
+
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container">
+        <div class="img-card">
+            <img class="card" src="pic.png" alt="image" />
+        </div>
+        <div class="login">
+            <h5><a class="log" href="login.html">Login</a></h5>
+        </div>
+    </div>
+</nav>
+
+<div class="basic">
+
+<div class="detail">
+<div class="text">
+    <p class="basicdetail">Basic Detail</p>
+</div>
+<div class="speciality">
+    <p class="strength"> Speciality, Strength or Current Role</p>
+    <input id="specialityInput" class="value" type="text">
+</div>
+
+<div class="gender">
+    <p class="strength">Gender</p>
+    <select id="genderSelect" class="fruit" name="fruits">
+        <option value="">--Please choose an option--</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+</div>
+
+<div class="date">
+    <p class="strength">Birth Date</p>
+     <input id="birthdateInput" class="birth" type="date"><br>
+    <button class="submit" onclick="saveDataAndRedirect()">Submit</button>
+</div>
+
+</div>
+</div>
+
+<script>
+    function saveDataAndRedirect() {
+        // Get input values
+        var speciality = document.getElementById('specialityInput').value;
+        var gender = document.getElementById('genderSelect').value;
+        var birthdate = document.getElementById('birthdateInput').value;
+
+        // Create an object to hold the data
+        var userData = {
+            speciality: speciality,
+            gender: gender,
+            birthdate: birthdate
+        };
+
+        // Save data to local storage
+        localStorage.setItem('userData', JSON.stringify(userData));
+
+        // Display "Data saved" message
+        var messageDiv = document.createElement('div');
+        messageDiv.textContent = 'Data saved';
+        messageDiv.style.position = 'fixed';
+        messageDiv.style.top = '50%';
+        messageDiv.style.left = '50%';
+        messageDiv.style.transform = 'translate(-50%, -50%)';
+        messageDiv.style.backgroundColor = '#f0f0f0';
+        messageDiv.style.padding = '20px';
+        messageDiv.style.border = '1px solid #ccc';
+        messageDiv.style.borderRadius = '5px';
+        messageDiv.style.zIndex = '9999';
+        document.body.appendChild(messageDiv);
+
+        // Hide message after 2 seconds
+        setTimeout(function() {
+            messageDiv.style.display = 'none';
+        }, 1000);
+
+        // Redirect to another page after 2 seconds
+        setTimeout(function() {
+            window.location.href = 'address-publicly.html';
+        }, 2000);
+    }
+</script>
+
+</body>
+</html>
