@@ -1,0 +1,343 @@
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+
+.parent-login-form{
+    height: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+ h2 {
+        text-align: center;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+        
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"],
+    .form-group select {
+        width: 30%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .form-group select {
+        padding: 11px;
+    }
+
+    .btn {
+        display: block;
+        /* width: 20%; */
+        /* padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+    .google-btn {
+        background-color: rgb(66, 133, 244);
+    }
+
+    .google-btn:hover {
+        background-color: #c1351d;
+    }
+
+    .google-btn{
+        width: 100%;
+    }
+ */
+
+ */
+
+
+    .parent-login-form {
+       width: 30%;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        margin-left: 80px;
+    }
+
+
+.chld-form{
+
+    height: 600px;
+    width: 40%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-content: center;
+    justify-content: center;
+    margin-left: 310px;
+    
+}
+  
+
+
+
+    h2 {
+        text-align: center;
+    } 
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"],
+    .form-group select {
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 1px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-left: 45px;                                      /*Use for Center Property*/                           
+                        
+    }
+
+    .form-group select {
+        padding: 11px;
+    }
+
+    .form-group .checkbox-label {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .btn {
+        display: block;
+        width: 40%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        /* border: ; */
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        
+    
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+/*    
+    .google-btn:hover {
+        background-color: #c1351d;
+    } */
+
+    .google-btn{
+        width: 85%;
+        text-align: center;
+        margin-left: 10px;
+        
+    }
+
+    .form-name{
+
+        margin-left: 50px;
+    }
+
+    .btn{
+        margin-left: 30px;
+        color:white;
+        margin-left: 150px;
+        
+    }
+
+
+    /* Store Setting */
+
+
+.btn-new{
+    display: block;
+    height: 40px;
+    width: 40%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+
+    border-radius: 1px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 30px;
+    color:white;
+    margin-left: 150px;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+
+
+#mySelect {
+height: 40px;
+width: 250px;
+
+text-align: center;
+
+
+}
+
+
+#result{
+
+    /* background-color: bisque; */
+    height: 50px;
+    width: 150px;
+    border: 1px solid black;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.content-center{
+height: 50px;
+width: 100%;
+/* background-color: blanchedalmond; */
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+margin-top: 50px;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+ 
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .class{
+height: 450px;
+width: 100%;
+/* background-color: aqua; */
+display: flex;
+justify-content: center;
+align-items: center;
+
+  }
+  .login-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   width: 400px;
+    height: 450px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    width: 30%;
+    padding: 10px;
+    background-color: rgb(52, 152, 219);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+
+
+.block{
+    height: 80px;
+    width: 100%px;
+    /* background-color: #0056b3; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+.image{
+
+    height: 30px;
+    width: 300px;
+    background-color: rgb(66, 133, 244);
+    color: white;
+}
+
+.color{
+    color: white;
+}

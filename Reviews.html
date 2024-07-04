@@ -1,0 +1,1833 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <title>Manage product reviews | TeacherOn </title>
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta name="_csrf" content="14efcb41-6133-4936-8164-81d32e3ea668" />
+    <meta name="_csrf_header" content="X-CSRF-TOKEN" />
+
+
+
+
+
+
+
+
+
+
+    <meta name="server" content="Mumbai">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-45382274-1"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-45382274-1');
+  gtag('config', 'AW-966223742');
+</script>
+-->
+
+
+    <!-- 17-Jun-21: Adding new code from google analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45382274-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-45382274-1');
+        gtag('config', 'AW-966223742');
+
+
+
+        gtag('config', 'G-R29HQ0VYGT', {
+            'user_id': '2159354'
+        });
+    </script>
+
+
+
+
+    <!-- add hotjar in head section -->
+
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="https://assets2.teacheron.com/resources/assets/img/faviconImages/ms-icon-144x144.png?t=1713420498701">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://assets2.teacheron.com/resources/assets/img/faviconImages/apple-icon-57x57.png?t=1713420498701">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://assets2.teacheron.com/resources/assets/img/faviconImages/apple-icon-60x60.png?t=1713420498701">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://assets2.teacheron.com/resources/assets/img/faviconImages/apple-icon-72x72.png?t=1713420498701">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://assets2.teacheron.com/resources/assets/img/faviconImages/apple-icon-76x76.png?t=1713420498701">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://assets2.teacheron.com/resources/assets/img/faviconImages/apple-icon-114x114.png?t=1713420498701">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://assets2.teacheron.com/resources/assets/img/faviconImages/apple-icon-120x120.png?t=1713420498701">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://assets2.teacheron.com/resources/assets/img/faviconImages/apple-icon-144x144.png?t=1713420498701">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://assets2.teacheron.com/resources/assets/img/faviconImages/apple-icon-152x152.png?t=1713420498701">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://assets2.teacheron.com/resources/assets/img/faviconImages/apple-icon-180x180.png?t=1713420498701">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://assets2.teacheron.com/resources/assets/img/faviconImages/android-icon-192x192.png?t=1713420498701">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://assets2.teacheron.com/resources/assets/img/faviconImages/favicon-32x32.png?t=1713420498701">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://assets2.teacheron.com/resources/assets/img/faviconImages/favicon-96x96.png?t=1713420498701">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://assets2.teacheron.com/resources/assets/img/faviconImages/favicon-16x16.png?t=1713420498701">
+
+    <link rel="manifest" href="/resources/assets/img/faviconImages/manifest.json?t=1713420498701">
+
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="https://assets2.teacheron.com/resources/assets/plugins/bootstrap/css/bootstrap.min.css?t=1713420498701">
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="https://assets2.teacheron.com/resources/common-combined-style.css?t=1713420498701">
+
+
+
+
+
+
+
+    <style>
+        body,
+        .ui-widget,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            word-wrap: break-word;
+        }
+
+        body,
+        p,
+        .p,
+        .ui-widget {
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: .5px;
+            line-height: 23px;
+        }
+
+        h1,
+        .h1 {
+            font-size: 30px;
+            line-height: 42px;
+        }
+
+        h2,
+        .h2 {
+            font-size: 25px;
+            line-height: 33px;
+        }
+
+        h3,
+        .h3 {
+            font-size: 21px;
+            line-height: 27px;
+        }
+
+        h4,
+        .h4 {
+            font-size: 17px;
+            line-height: 25px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 500;
+            margin-top: 30px;
+        }
+
+        .form-control {
+            font-size: 15px;
+        }
+
+        .list-inline>li {
+            display: inline-block;
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+
+        .container {
+            width: 92.5%;
+        }
+    </style>
+
+
+
+    <link rel="preload" href="https://assets2.teacheron.com/resources/sky-form-css.css?t=1713420498701" as="style" onload="this.rel='stylesheet'">
+
+    <!--[if lt IE 9]><link rel="stylesheet" href="https://assets2.teacheron.com/resources/assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css?t=1713420498701"><![endif]-->
+
+
+
+    <link rel="preload" href="https://assets2.teacheron.com/resources/assets/customPlugin/jquery-ui-1.12.1.custom/jquery-ui.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://assets2.teacheron.com/resources/assets/plugins/fontawesome-free-5.8.1-web/css/all.min.css">
+
+
+
+
+    <link rel="preload" href="https://assets2.teacheron.com/resources/assets/customPlugin/DataTables/DataTables-1.10.16/css/jquery.dataTables.min.css" as="style" onload="this.rel='stylesheet'">
+
+
+
+
+
+
+
+
+    <script>
+        var lazyAssetsLoaded = false;
+        var CONTEXT = '/';
+        var TEST_APP_API_PREFIX_COMMON = 'api/testapp/';
+        var TEST_APP_URL_PREFIX_COMMON = 'testapp/';
+        var ajaxTimeoutVal = 10000;
+        var setContextPath = function() {
+            var hostName = window.location.host;
+            if (!hostName.includes('.com')) {
+                CONTEXT = '/teacheron/';
+                ajaxTimeoutVal = 1000000; // for local increase its time to not to timeout
+            }
+        };
+        setContextPath();
+        var getAppContext = function() {
+            return CONTEXT;
+        };
+        var GLOBAL_VAR = {
+            DEBUG: true
+        };
+        // ref: https://stackoverflow.com/questions/24413881/why-is-is-not-equal-to-null
+        var isNotBlank = function(data) {
+            return (data !== undefined) && (data !== null) && (data !== "") && (data != 'null');
+        };
+        var isBlank = function(val) {
+            // Note: val=='' if return true when val=0
+            return (typeof val == "undefined" || val == '' || val == null || val == 'null');
+        };
+
+        function Trim(str) {
+            if (str === undefined) {
+                return str;
+            }
+            str = str.replace(/^\s+|\s+$/g, '');
+            return str;
+        }
+        var replaceMultipleSpacesWithOne = function(val) {
+            if (isNotBlank(val)) {
+                val = val.replace(/ {2,}/g, ' ');
+            }
+            return val;
+        };
+
+        function convertBase(value, from_base, to_base) {
+            var range = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+/'.split('');
+            var from_range = range.slice(0, from_base);
+            var to_range = range.slice(0, to_base);
+            //customization
+            value = String(value);
+            var dec_value = value.split('').reverse().reduce(function(carry, digit, index) {
+                if (from_range.indexOf(digit) === -1) throw new Error('Invalid digit `' + digit + '` for base ' + from_base + '.');
+                return carry += from_range.indexOf(digit) * (Math.pow(from_base, index));
+            }, 0);
+
+            var new_value = '';
+            while (dec_value > 0) {
+                new_value = to_range[dec_value % to_base] + new_value;
+                dec_value = (dec_value - (dec_value % to_base)) / to_base;
+            }
+            return new_value || '0';
+        }
+        var intToBase62 = function(value) {
+            if (isNotBlank(value)) {
+                /*var converted = (parseInt(value)).toString(36);*/
+                var converted = convertBase(value, 10, 62);
+                return converted;
+            } else {
+                console.log('Error in intToBase62() value=', value);
+                return null;
+            }
+        };
+    </script>
+    <link rel="stylesheet" href="https://assets2.teacheron.com/resources/assets/customPlugin/star-rating-rateyo/jquery.rateyo.min.css?t=1713420498701">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <!--=== Header ===-->
+
+
+
+
+
+
+
+
+
+
+
+        <style>
+            .img-teacheron-cart {
+                height: 22px;
+                width: 32px;
+            }
+
+            .img-teacheron {
+                height: 32px;
+                width: 32px;
+            }
+        </style>
+
+
+
+
+        <!-- ==== TOP BAR RELATED CODE cSTART ==== -->
+
+        <noscript>
+    <div class="alert alert-danger fade in">
+        <strong>JavaScript is turned off in your web browser. Please turn it on to use the teacherOn.com</strong>
+    </div>
+</noscript>
+
+        <!-- jqyery time related code when websire is getting down for maintenance -->
+
+
+
+
+
+
+
+
+
+
+
+        <div class="hidden clsProfileSubmittedForReview">
+            <div class="alert alert-success text-center" style="padding: 8px;">
+                You profile has been submitted for review.
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div id="msgForIE" style="display: none;">
+            <div class="alert alert-danger-light text-center no-margin float-center ">
+                <div style="margin: 0 auto;  display: inline-block;">
+                    IE browser detected. We recommend you use a modern browser like <a rel="noreferrer" href="https://www.google.com/chrome/" target="_blank">Chrome</a> or <a rel="noreferrer" href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">firefox</a>                    for the best experience.
+                    <div class="clear-both"></div>
+                </div>
+            </div>
+            <br/>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="header">
+            <!-- header div start.. will end at the end -->
+            <div class="container">
+                <a class="logo" href="myJobPosts.html">
+            <img src="https://assets2.teacheron.com/resources/assets/img/customImages/teacheron-transparent-small.png" alt="Logo">
+        </a>
+                <!-- Topbar -->
+                <div class="topbar">
+
+
+                    <ul class="loginbar pull-right list-unstyled">
+                        <li class="showOnlyInMobile">
+                            <!-- <div class="display-inline-block"> -->
+                            <!-- Toggle get grouped for better mobile display -->
+
+                            <button type="button" class="navbar-toggle " id="menuForMobileBtnId" data-toggle="collapse" data-target=".navbar-responsive-collapse" style="clear: both; float:left;">
+                        <span class="sr-only">Toggle navigation</span>
+                        <!-- <span class="fas fa-bars"></span> -->
+                        <img alt="menu" src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGIiBoZWlnaHQ9IjM2IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIzNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMyAxOGgxOHYtMkgzdjJ6bTAtNWgxOHYtMkgzdjJ6bTAtN3YyaDE4VjZIM3oiLz48L3N2Zz4K" height="20px" width="20px">
+                    </button>
+
+
+
+                            <!-- End Toggle -->
+                            <!-- </div> -->
+
+                        </li>
+
+                        <li class="showOnlyInMobile">
+                            <!-- Inline logo to be shown only in mobile. -->
+                            <a class="inlineLogo" href="https://www.teacheron.com">
+                        <img class="hideBelow450" src="https://assets2.teacheron.com/resources/assets/img/customImages/teacheron-transparent-small.png?t=1713420498701" alt="Logo">
+                        <div style="margin-top: 8px; padding-left: 6px; display:inline-block;">
+                        	<img class="showBelow450" src="https://assets2.teacheron.com/resources/assets/img/customImages/teacheronLogoOnly.png?t=1713420498701" alt="Logo" style="height:30px;">
+                        </div>
+                    </a>
+                            <!-- End Toggle -->
+                        </li>
+
+                        <li class="floatRightInMobile">
+
+
+                            <ul class="list-inline- up-ul allChildLinksNormal padding-left-0">
+
+
+
+
+
+
+<!-- 
+
+                                <li class="btn-group">
+                                    <button class="clsFindPendingUnreadUserMsgCount btn btn-default clsStandAloneUnreadMsgStudent" type="button" style="border:none;padding: 4px 6px 0 6px; margin-right: 10px; /* font-size: 29px; */">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-envelope" width="30" height="30" viewBox="0 0 128 100" class="svgEnvelopeIcon">
+                                            <path class="foreground" fill="#888" d="M 65.438456,65.221147 126.86843,26.807809 c 0.70148,-0.500499 1.30276,-1.626623 1.30276,-2.752748 V 12.793822 c 0,-1.000999 -0.70149,-1.876873 -1.50318,-1.876873 H 1.5031805 C 0.70148421,11.042074 0,11.917948 0,12.918948 v 11.261239 c 0,1.000999 0.60127218,2.252247 1.3027564,2.752746 L 62.732731,65.346272 c 0.801696,0.375375 2.00424,0.375375 2.705725,-0.125125 z"></path>
+                                            <path class="foreground" fill="#777" d="M 62.7,75.387792 1.3,36.876165 c -0.7,-0.50342 -1.3,0 -1.3,1.00684 v 76.771545 c 0,1.00684 0.7,1.88783 1.5,1.88783 h 125 c 0.8,0 1.5,-0.88099 1.5,-1.88783 V 37.883005 c 0,-1.00684 -0.6,-1.51026 -1.3,-1.00684 L 65.3,75.387792 c -0.7,0.503419 -1.9,0.503419 -2.6,0 z"></path>
+                                        </svg>
+                                        <span style="font-size: 10px; margin-left:-16px; margin-top:-34px; background-color:#e74c3c; margin-right: -5px;" class="badge badge-red rounded-x total-unread-msg-count-badge"></span>
+                                        <span class="hidden-xs" style="vertical-align: super;">Messages</span>
+                                        <span class="sr-only">Toggle Message Dropdown</span>
+                                    </button>
+                                </li>
+
+ -->
+
+
+
+
+
+ <button id="myButton">Messages</button>
+
+ <style>body {
+     margin: 0%;
+     font-family: Arial, sans-serif;
+     text-align: center;
+ }
+ 
+ button {
+     padding: 10px 20px;
+     font-size: 16px;
+     cursor: pointer;
+     background-color: #007bff;
+     color: #fff;
+     border: none;
+     border-radius: 5px;
+     margin-top: 1px;
+ }
+ 
+ button:hover {
+     background-color: #0056b3;
+ }</style>
+ 
+ <script>
+ 
+ document.getElementById("myButton").addEventListener("click", function() {
+     window.location.href = "messages.html"; // Replace with the URL you want to redirect to
+ });
+ 
+ 
+ </script>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+                                <li class="btn-group">
+                                    <button data-toggle="dropdown" class="btn btn-default dropdown-toggle color-light-grey" type="button" style="border:none;padding: 1px 0 0 0; /* font-size: 29px; */">
+                                <!--  margin-right: -15px; margin-top: -7px; -->
+                                <!-- <img src="https://www.teacheron.com/resources/assets/customPlugin/chatbot/images/unknown.jpg" class=" img-responsive- rounded-x" style="height:34px; width:34px;" alt="Profile image with menu options"><span class="hidden-xs margin-right-5 margin-left-5">Ibrahim <i class="fas fa-angle-down " style="width: 9.68px; display: inline-block;"></i></span><span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                                    <ul role="menu" class="dropdown-menu topbarDropdown" style="left:auto;right:0;z-index:10000; ">
+                                        <li class='simpleText'><span>Accounts</span></li>
+                                        <li class='subMenu active clsStudentClientLink'><a class='bold color-blue' href='https://www.teacheron.com/sDashboard'><i class='fas fa-user'></i> Student/Client</a></li>
+                                        <li class='subMenu clsTutorExpertLink'><a href='https://www.teacheron.com/registerAsExpert'><i class='fas fa-chalkboard-teacher'></i> Teacher/Expert</a>
+                                            <li class='subMenu clsCartLink '><a href='https://www.teacheron.com/store/dashboard'><i class="fas fa-shopping-cart"></i> Store</a>
+                                            </li>
+                                            <li>
+                                                <hr>
+                                            </li>
+                                            <li class='simpleText'>Ibrahim<br><small>ibrahimqadiriiq@gmail.com</small></li>
+                                            <li>
+                                                <hr>
+                                            </li>
+
+
+
+                                            <li><a href="https://www.teacheron.com/profileSettings"><i class="fa fa-cog color-dark"></i>Settings</a></li>
+
+                                            <li><a href="https://www.teacheron.com/logout.html"><i class="fas fa-sign-out-alt"></i>Sign out</a></li>
+                                    </ul>
+                                    </li>
+                            </ul>
+
+                            </li>
+                    </ul> -->
+<div class="container">
+    <select id="accountType">
+              <option value="ibrahim">Ibrahim</option>
+      <option value="student">Student/Client</option>
+      <option value="teacher">Teacher/Expert</option>
+      <option value="store">Store</option>
+      <option value="Logout">Logout </option>
+    </select>
+  </div>
+
+
+<style>
+
+  .container {
+    /* margin: 50px auto; */
+    text-align: center;
+  }
+  
+  #accountType {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }</style>
+
+
+  <script>// Get the select element
+    const accountSelect = document.getElementById("accountType");
+    
+    // Add event listener for when an option is selected
+    accountSelect.addEventListener("change", function() {
+      // Get the selected option value
+      const selectedOption = accountSelect.value;
+      
+      // Define the URLs to redirect to based on the selected option
+      const urls = {
+        
+        "student": "myJobPosts.html",
+        "teacher": "myJobPosts.html",
+        "store": "store.html",
+        "Logout": "store.html",
+      };
+    
+      // Redirect the user to the corresponding URL
+      if (selectedOption in urls) {
+        window.location.href = urls[selectedOption];
+      }
+    });</script>
+
+                    <div class="clear-both"></div>
+                </div>
+                <!-- End Topbar -->
+
+            </div>
+            <!--/end container-->
+
+            <!-- ==== TOP BAR RELATED CODE END ==== -->
+
+            <!-- ====MENU RELATED CODE START ==== -->
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse margin-bottom-10">
+                <div class="container margin-top-10 margin-bottom-20">
+                    <ul class="nav navbar-nav ">
+
+
+                        <!-- Assignment help - dont show this link when student is logged in -->
+
+
+
+
+
+
+                        <li><a href="myJobPosts.html">My Posts</a></li>
+                        <li class="dropdown">
+                            <a href="teacher.html" class="dropdown-toggle" data-toggle="dropdown">
+        Find Tutors
+    </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="teacher.html">All Tutors</a></li>
+                                <li><a href="online-tutors.html">Online Tutors</a></li>
+                                <li><a href="home-tutors.html">Home Tutors</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+        Wallet
+    </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="buyCoins.html">Coin Wallet</a></li>
+                                <li><a href="buyCoins.html">Buy Coins</a></li>
+                                <li><a href="payments.html">Payments</a></li>
+                                <li><a href="friendsInvite.html">Invite friends for coins</a></li>
+                                <li><a href="referAndEarn.html">Refer to get coins</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="Reviews.html">Reviews</a></li>
+
+
+
+                        <li><a class="goPremiumMenuLink" href="upgrade-repquest.html">Post Requirement</a></li>
+
+
+
+
+
+                    </ul>
+                </div>
+                <!--/end container-->
+            </div>
+            <!--/navbar-collapse-->
+
+            <!-- ====MENU RELATED CODE END ==== -->
+        </div>
+        <!-- header div end -->
+
+
+
+
+        <!--=== End Header ===-->
+
+        <div class="container-- content-- no-padding-top-- singleColumnCenterParent withPadding">
+            <div class="col-lg-8- col-lg-push-2- col-md-10- col-md-push-1- singleColumnCenterChild">
+                <div class="col-sm-12-">
+                    <div class="table-search-v2 col-sm-12- rounded-2x">
+
+
+
+
+
+
+
+
+
+                        <!-- msg will be static and it will not hide -->
+
+
+
+
+
+
+
+                        <!-- msg will be static and it will not hide automatically-->
+
+
+
+
+
+                        <!-- msg will be static and it will not hide automatically-->
+
+
+                        <!-- defining session based msg -->
+
+
+
+
+                        <!-- delete modal start -->
+                        <div class="modal small fade autoWidthModal wordBreak" id="deleteModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        <h4 class="modal-title" id="myModalLabel"> Confirm to delete </h4>
+                                    </div>
+                                    <div class="modal-body stripeBg">
+                                        <h5 class="modal-title"> Are you sure want to delete this? </h5>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                        <button type="button" id="delModalBtn" class="btn btn-danger"> Delete </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- delete modal end -->
+
+
+                        <div class="modal small fade autoWidthModal wordBreak" id="customErrorMsgModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+
+                                        <h4 class="modal-title" id="customErrorMsgTitle"> </h4>
+                                    </div>
+                                    <div class="modal-body stripeBg">
+                                        <h5 class="modal-title" id="customErrorMsg"> </h5>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" id="errorCloseBtn" class="btn-u btn-u-red" data-dismiss="modal"> Close </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="no-margin-top">Manage reviews<small class="display-inline-block- hidden">(Reviews I gave to others)</small></h2>
+
+
+
+                        <div class="alert alert-danger-light display-inline-block">You have not given any reviews yet.</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--=== Footer ===-->
+        <!--=== Footer Version 1 ===-->
+
+
+
+
+
+<!-- 
+
+        <div class="footer-v1 sticky-footer">
+            <div class="copyright">
+                <div class="container">
+                    <div class="row width-auto margin-auto text-center">
+                        <div class="footerColumnDiv">
+                            <ul class="list-unstyled black-bg-links">
+                                <li class="footerColumnHeading headline">Resources</li>
+                                <li><a href="/learning-mind"> Learning mind&#x1F4A5;</a></li>
+                                <li><a href="/about-us"> About us</a></li>
+                                <li><a href="/stay-safe"> Stay safe</a></li>
+                                <li><a href="/blog">Blog</a></li>
+                                <li><a href='/refer-and-earn-coins'>Refer & earn coins</a></li>
+                                <li><a href="/faq">FAQs</a></li>
+                                <li><a href="/coins">Coins & Pricing</a></li>
+                                <li><a href="/how-it-works-students">How it works - Students</a></li>
+                                <li><a href="/pay-teachers">Pay teachers</a></li>
+                            </ul>
+                        </div>
+                        <div class="footerColumnDiv">
+                            <ul class="list-unstyled black-bg-links">
+                                <li class="footerColumnHeading headline">For teachers</li>
+                                <li><a href="/get-paid">Get paid</a></li>
+                                <li><a href="/premium-membership-for-tutors">Premium membership</a></li>
+                                <li><a href="/blog/online-teaching-guide">Online teaching guide</a></li>
+                                <li><a href="/how-it-works-teachers">How it works - Teachers</a></li>
+                                <li><a href='/blog/how-to-get-students-and-teaching-jobs'>How to get jobs</a></li>
+                                <li><a href="/how-to-apply-to-a-job-and-contact-students">Applying to jobs</a></li>
+                                <li><a href="/blog/how-we-rank-teachers-on-teacheron">Teacher Rankings</a></li>
+                                <li><a href="/share-stories">Share a story</a></li>
+                            </ul>
+                        </div>
+                        <div class="footerColumnDiv" style="padding-bottom: 30px;">
+                            <ul class="list-unstyled black-bg-links">
+                                <li class="footerColumnHeading headline">Help and Feedback</li>
+                                <li><a href="/feedback">Feedback</a></li>
+                                <li><a href="/testimonials">Testimonials</a></li>
+                                <li><a href="/contact"> Contact us</a></li>
+                                <li><a href="/refund-policy"> Refund Policy</a></li>
+                                <li><a href="/privacy-policy"> Privacy Policy</a></li>
+                                <li><a href="/terms-and-conditions"> Terms</a></li>
+                            </ul>
+                        </div> -->
+
+                        <div class="clear-both"></div>
+                    </div>
+                </div>
+                <div class="clear-both"></div>
+            </div>
+            <!--/copyright-->
+            <div class="clear-both"></div>
+            <div class="copyright color-white text-center hidden" style="margin-top: 1px;">
+                &copy; Crux Services LLC
+            </div>
+        </div>
+        <!--=== End Footer Version 1 ===-->
+
+
+        <!--=== End Footer ===-->
+    </div>
+    <!--/wrapper-->
+
+    <!-- common js file -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="/resources/assets/js/customScript/jquery-1.10.2.min.js"></script>
+
+
+    <script src="https://assets2.teacheron.com/resources/common-combined-script.js?t=1713420498701"></script>
+
+
+
+
+
+    <script src="https://assets2.teacheron.com/resources/jquery-maskinput-ui.js?t=1713420498701"></script>
+
+
+
+
+    <script src="https://assets2.teacheron.com/resources/data-tables-script.js?t=1713420498701"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Global site tag (gtag.js) - Google AdWords: 966223742 conversion tracking from adwords er account -->
+    <!-- Commented temporarily as no ads running. 
+Conversion tracking is now managed with analytics account by plugging in gtag('config', 'AW-966223742');  -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-966223742"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-966223742');
+</script>
+
+ -->
+
+
+
+    <script>
+        function getTotalUnReadMsgCount() {
+            var unreadCount = 0;
+            try {
+                unreadCount = $('.total-unread-msg-count-badge').text();
+            } catch (e) {
+                unreadCount = 0;
+            }
+            return unreadCount;
+        }
+
+
+        //     jQuery(document).ready(function() {
+        $(window).load(function() {
+
+
+            $.ajax({
+                type: "GET",
+                url: getAppContext() + 'findUnreadMsgCount',
+                cache: false,
+                error: function(jqXHR, textStatus, errorMessage) {
+
+                },
+                success: function(data) {
+
+                    try {
+                        var resObject = JSON.parse(data);
+                        if (resObject.status == 'SUCCESS') {
+                            var unreadMsgObj = resObject.unreadMsgJson;
+
+                            var unreadMsgCurrentUser = unreadMsgObj.unreadMsgCurrentUser;
+                            var unreadMsgStudent = unreadMsgObj.unreadMsgStudent;
+                            var unreadMsgTutor = unreadMsgObj.unreadMsgTutor;
+                            var totalUnreadCount = unreadMsgStudent + unreadMsgTutor;
+                            var isStudentAndTutorAccountFound = unreadMsgObj.isStudentAndTutorAccountFound;
+
+                            // its common for both student and tutor both, its a main message icon.
+                            if (totalUnreadCount >= 1) {
+                                $(".total-unread-msg-count-badge").html(totalUnreadCount);
+                                $(".total-unread-msg-count-badge").show();
+                            }
+
+                            if (isStudentAndTutorAccountFound) {
+                                if (unreadMsgStudent >= 1) {
+                                    $('.client-unread-msg-count-badge').html(unreadMsgStudent);
+                                    $('.client-unread-msg-count-badge').show();
+                                }
+                                if (unreadMsgTutor >= 1) {
+                                    $('.expert-unread-msg-count-badge').html(unreadMsgTutor);
+                                    $('.expert-unread-msg-count-badge').show();
+                                }
+                            } else {
+                                // this is not required. It is already covered by 'total-unread-msg-count-badge' for single.
+                            }
+
+                            // add message when user is viewing jobMessages.
+                            if (unreadMsgCurrentUser >= 1) {
+                                try {
+                                    if ($('.clsUnreadMsgBtnInJobMsgs').length) {
+                                        $('.clsUnreadMsgBtnInJobMsgs').append(" (" + unreadMsgCurrentUser + ")");
+                                    }
+                                } catch (e) {
+                                    console.log(e);
+                                }
+                            }
+                        }
+                    } catch (e) {
+                        console.log('show unread messages: ', e);
+                    }
+                }
+            }); // Ajax end
+
+
+            $(".clsClientUnreadMsgLink").on("click", function() {
+                var redirectToAllMsg = true;
+                try {
+                    if (isNotBlank($('.client-unread-msg-count-badge').text()) && $('.client-unread-msg-count-badge').text() >= 1) {
+                        redirectToAllMsg = false;
+                        window.location.href = 'https://www.teacheron.com/clientJobMessages?unreadMsgOnly=true';
+                    }
+                } catch (e) {}
+                if (redirectToAllMsg) {
+                    window.location.href = 'https://www.teacheron.com/clientJobMessages';
+                }
+            });
+
+            $(".clsExpertUnreadMsgLink").on("click", function() {
+                var redirectToAllMsg = true;
+                try {
+                    if (isNotBlank($('.expert-unread-msg-count-badge').text()) && $('.expert-unread-msg-count-badge').text() >= 1) {
+                        redirectToAllMsg = false;
+                        window.location.href = 'https://www.teacheron.com/expertJobMessages?unreadMsgOnly=true';
+                    }
+                } catch (e) {}
+                if (redirectToAllMsg) {
+                    window.location.href = 'https://www.teacheron.com/expertJobMessages';
+                }
+            });
+
+            $(".clsStandAloneUnreadMsgTutor").on("click", function() {
+                var unreadCount = getTotalUnReadMsgCount();
+                if (unreadCount > 0) {
+                    window.location.href = 'https://www.teacheron.com/expertJobMessages?unreadMsgOnly=true';
+                } else {
+                    window.location.href = 'https://www.teacheron.com/expertJobMessages';
+                }
+            });
+
+            $(".clsStandAloneUnreadMsgStudent").on("click", function() {
+                var unreadCount = getTotalUnReadMsgCount();
+                if (unreadCount > 0) {
+                    window.location.href = 'https://www.teacheron.com/clientJobMessages?unreadMsgOnly=true';
+                } else {
+                    window.location.href = 'https://www.teacheron.com/clientJobMessages';
+                }
+            });
+
+
+
+
+            $('.clsBannedEditProfileSubmitForReview').click(function() {
+                submitBannedEditProfileForReview();
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+    <!--[if lt IE 9]>
+<script src="https://assets2.teacheron.com/resources/assets/plugins/respond.js?t=1713420498701"></script>
+<script src="https://assets2.teacheron.com/resources/assets/plugins/html5shiv.js?t=1713420498701"></script>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+
+	<script src="https://assets2.teacheron.com/resources/assets/plugins/sky-forms/version-2.0.1/js/sky-forms-ie8.js?t=1713420498701"></script>
+
+<![endif]-->
+
+    <!--[if lt IE 10]>
+<script src="https://assets2.teacheron.com/resources/assets/plugins/sky-forms/version-2.0.1/js/jquery.placeholder.min.js?t=1713420498701"></script>
+<![endif]-->
+
+
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "TeacherOn.com",
+            "sameAs": ["https://www.teacheron.com/", "https://www.facebook.com/teacherOnDotCom/", "https://twitter.com/teacherondotcom",
+                "https://www.trustpilot.com/review/teacheron.com", "https://g.page/teacheron/"
+            ],
+            "url": "https://www.teacheron.com/",
+            "logo": "https://www.teacheron.com/resources/assets/img/customImages/tLogo.jpg",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.7",
+                "reviewCount": "623",
+                "bestRating": "5",
+                "author": {
+                    "@type": "Organization",
+                    "name": "Google",
+                    "sameAs": "https://www.google.com/"
+                },
+                "url": "https://www.google.com/maps/place/TeacherOn.com/@0.5597705,55.8218867,3z/data=!3m1!4b1!4m5!3m4!1s0x391a819ca794059f:0x35593190e9db20be!8m2!3d8.7507435!4d142.1827514"
+            }
+        }
+    </script>
+
+    <script type="text/javascript" src="https://assets2.teacheron.com/resources/assets/customPlugin/star-rating-rateyo/jquery.rateyo.min.js?t=1713420498701"></script>
+    <script type="text/javascript" src="https://assets2.teacheron.com/resources/assets/js/forms/manageMyReviews.js?t=1713420498701"></script>
+    <script type="text/javascript" src="https://assets2.teacheron.com/resources/assets/customPlugin/maxCharsLength/MaxLength.min.js?t=1713420498701"></script>
+
+
+    <link rel="stylesheet" href="https://assets2.teacheron.com/resources/brand-buttons-combine-style.css?t=1713420498701">
+
+
+
+
+    <link rel="stylesheet" href="https://assets2.teacheron.com/resources/assets/customPlugin/star-rating-rateyo/jquery.rateyo.min.css?t=1713420498701">
+
+    <!-- show model for review saved and link to review us -->
+    <div class="modal fade autoWidthModal wordBreak" id="askToReviewTeacherOnModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="">
+            <input type="hidden" name="askToReviewUs_redirectUrl" id="askToReviewUs_redirectUrl" />
+
+            <div class="modal-content" style="max-width: 400px;">
+                <div class="modal-header">
+                    <button type="button" class="close" id="askToReviewUs_closeBtn">&times;</button>
+                    <p class="modal-title"><i class="fas fa-check-circle color-green"></i> Review posted</p>
+                </div>
+                <div class="modal-body stripeBg-" id="skipConfirmation">
+                    <p>
+                        We are very excited about your positive experience with us. <br/><br/> We are confident that you would like others to have a similar experience. A 5-star review would help us to reach others like you. <br/><br/> So, it would mean
+                        a lot if you leave us a gloriously awesome review on one or more of the following:<br/>
+
+                        <div class="text-center">
+                            <a class="btn btn-xing-inversed rounded margin-bottom-10" href="https://www.trustpilot.com/evaluate/teacheron.com" target="_blank">
+                            <i class="fas fa-star"></i> Trustpilot
+                        </a>
+
+                            <a class="btn btn-googleplus-inversed rounded margin-bottom-10" href="https://www.g.page/teacheron/review" target="_blank">
+                            <i class="fab fa-google"></i> Google
+                        </a>
+
+                            <a class="btn btn-facebook-inversed rounded margin-bottom-10" href="https://www.facebook.com/teacherOnDotCom" target="_blank">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </a>
+                        </div>
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--------------------- Modal for User Rating and Review -----------  START -------->
+    <div class="modal small fade" id="reviewAndRatingMainDiv" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Rate and review</h4>
+                </div>
+                <form id="userReviewForm" class="sky-form" method="post" action="javascript:void(0);">
+                    <input type="hidden" name="_csrf" value="14efcb41-6133-4936-8164-81d32e3ea668" />
+                    <div class="modal-body">
+                        <!-- it will be used when adding new review only -->
+                        <input type="hidden" name="mainTxnIdForReview" id="mainTxnIdForReview" />
+                        <input type="hidden" name="rating" id="rating" value="0" />
+
+
+                        <input type="hidden" name="id" id="id" />
+
+
+
+
+
+
+
+
+                        <section id="userEmailDiv" style="display: none">
+                            <div id="sendEmailTxtBtn"></div>
+                            <label class="label"><b>Review From user email:</b> <span id="fromUserEmailVal"></span></label>
+                            <label class="label"><b>Review to user email:</b> <span id="toUserEmailVal"></span></label>
+                        </section>
+
+                        <section>
+                            <label class="label">Rating</label>
+                            <label class="input">
+                            <div id="rateYo"></div>
+                        </label>
+                            <div id="ratingErrorMsg" style="display: none;" class="custom-form-validation-error">Please select rating</div>
+                        </section>
+
+                        <section>
+                            <label class="label">Add a headline</label>
+                            <label class="input">
+                            <input type="text" autocomplete="off" onkeypress="validateStarRating(false);" placeholder="What's most important to know?" name="reviewHeading" id="reviewHeading">
+                        </label>
+                            <span style="display: none" id="reviewHeadingCount"></span>
+                            <div id="reviewHeadingErrorMsg"></div>
+                        </section>
+
+
+                        <section>
+                            <label class="label">Write your review</label>
+                            <label class="textarea">
+                            <textarea rows="4" onkeypress="validateStarRating(false);" placeholder="What did you like or dislike? What were the results?" name="userReview" id="userReview"></textarea>
+                        </label>
+                            <span style="display: none" id="userReviewCount"></span>
+                            <div id="reviewErrorMsg"></div>
+
+                            <div id="reviewEscalateReason" style="display: none" class="alert alert-warning fade in"></div>
+                        </section>
+
+
+                        <div id="saveReviewError"></div>
+                    </div>
+                    <div class="modal-footer">
+
+
+                        <button type="submit" onclick="validateStarRating(true);" id="btn_submitReview" class="btn-u btn-u-blue"><span id="btnLabelSaveOrUpdateReview">Rate and review</span></button>
+                        <img id="imgLoader_review" style="display: none;" src="/resources/assets/img/customImages/load.gif" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--------------------- Modal for User Rating and Review -----------  END -------->
+
+    <script src="https://assets2.teacheron.com/resources/assets/customPlugin/star-rating-rateyo/jquery.rateyo.min.js?t=1713420498701"></script>
+    <script src="https://assets2.teacheron.com/resources/assets/customPlugin/maxCharsLength/MaxLength.min.js?t=1713420498701"></script>
+
+
+    <script type="text/javascript">
+        function updateBtnLabelChangeOrUpdateReview(flow) {
+            var btnLabel = 'Rate and review';
+            if (flow == 'update') {
+                btnLabel = 'Update rate and review';
+            }
+            $('#btnLabelSaveOrUpdateReview').html(btnLabel);
+        }
+
+
+        var REVIEW_URL_VAL = {
+            DELETE_REVIEW: getAppContext() + 'deleteReview',
+            FIND_REVIEW: getAppContext() + "findReview",
+            UPDATE_REVIEW: getAppContext() + 'updateReview',
+            SAVE_USER_REVIEW: getAppContext() + 'saveUserReview',
+            SAVE_USER_REVIEW_DIRECTLY: getAppContext() + 'saveUserReviewDirectly',
+            SHOW_OR_HIDE_USER_REVIEW: getAppContext() + 'showOrHideUserReview',
+            CHECK_IF_REVIEW_PROVIDED_EARLIER: getAppContext() + 'checkIfReviewProvidedEarlier'
+        };
+
+        var req_heading_error = 'Please enter headline';
+        var req_review_error = 'Please enter review';
+        // it can be add or update, default is 'add' flow and it will be modified to update.
+        var reviewFlow = 'add';
+        // When review is provided at tutorProfile page then set value to this variable. If tutor profile detected then reload page
+        // because it will not work due to hashTag
+        var tutorProfileUrlForReviewRedirect = '';
+
+        var btnId = 'btn_submitReview';
+        var imgLoaderId = 'imgLoader_review';
+
+        var getStarRating = function() {
+            var $rateYo = $("#rateYo").rateYo();
+            var rating = $rateYo.rateYo("rating");
+            //alert('rating: '+rating);
+            return rating;
+        };
+
+        var validateStarRating = function(focusToDiv) {
+            var rating = getStarRating();
+            if (isBlank(rating) || !(rating >= 1 && rating <= 5)) {
+                if (focusToDiv) {
+                    // scroll to the rating UI
+                    document.location.href = "#rateYo";
+                }
+                $('#ratingErrorMsg').show();
+                return false;
+            } else {
+                $('#ratingErrorMsg').hide();
+                return true;
+            }
+        };
+
+        var showOrHideErrorMsgCommon = function(msg, isSuccess, divId) {
+            $('#' + divId).removeClass('alert-success');
+            $('#' + divId).removeClass('custom-form-validation-error');
+            if (isSuccess) {
+                $('#' + divId).addClass('alert-success');
+            } else {
+                $('#' + divId).addClass('custom-form-validation-error');
+            }
+            $('#' + divId).html(msg);
+            $('#' + divId).show();
+        };
+
+        var resetErrorMsgToSaveReviewAndRating = function() {
+            $('#ratingErrorMsg').hide();
+
+            $('#reviewHeadingErrorMsg').html('');
+            $('#reviewHeadingErrorMsg').hide();
+
+            $('#reviewErrorMsg').html('');
+            $('#reviewErrorMsg').hide();
+
+            $('#saveReviewError').html('');
+            $('#saveReviewError').hide();
+        };
+
+        var closeReviewModal = function() {
+            $('#reviewAndRatingMainDiv').modal('hide');
+        };
+
+        var UserReviewFormVal = function() {
+            return {
+                initValidation: function() {
+                    $("#userReviewForm").validate({
+                        rules: {
+                            reviewHeading: {
+                                required: true
+                            },
+                            userReview: {
+                                required: true
+                            }
+                        },
+                        // Messages for form validation
+                        messages: {
+                            reviewHeading: {
+                                required: req_heading_error
+                            },
+                            userReview: {
+                                required: req_review_error
+                            }
+                        },
+
+                        // Do not change code below
+                        errorPlacement: function(error, element) {
+                            error.insertAfter(element.parent());
+                        },
+
+                        submitHandler: function(label) {
+                            // get the value of rating and check whether its selected or not.
+                            var isValidStarRating = validateStarRating(false);
+                            if (!isValidStarRating)
+                                return false;
+
+                            resetErrorMsgToSaveReviewAndRating();
+
+                            if (reviewFlow == 'add') {
+                                saveUserReview();
+                            } else if (reviewFlow == 'update') {
+                                updateUserReview();
+                            } else if (reviewFlow == 'saveDirectly') {
+                                saveUserReviewDirectly();
+                            }
+                        }
+                    });
+                }
+            };
+        }();
+
+        var saveUserReviewDirectly = function() {
+            var formData = new FormData($('form#userReviewForm')[0]);
+            $.ajax({
+                type: "POST",
+                cache: false,
+                url: REVIEW_URL_VAL.SAVE_USER_REVIEW_DIRECTLY,
+                data: formData,
+                contentType: false,
+                processData: false,
+                beforeSend: function() {
+                    showLoaderImgAndHideBtn(imgLoaderId, btnId);
+                },
+                error: function(jqXHR, textStatus, errorMessage) {
+                    alert(ERROR_MSG.AJAX_FAILED_MSG);
+                    hideLoaderImgAndShowBtn(imgLoaderId, btnId);
+                },
+                success: function(obj) {
+                    try {
+                        //console.log('hideTutorPhoneEvent called, data is:', data);
+                        //var obj = JSON.parse(data);
+                        if (obj.status == 'SUCCESS') {
+                            if (isNotBlank(obj.showLinkToReviewUs) && obj.showLinkToReviewUs == 'Y') {
+                                try {
+                                    closeReviewModal();
+                                } catch (e) {}
+                                $("#askToReviewUs_redirectUrl").val(obj.redirect_url);
+                                openModalCommon('askToReviewTeacherOnModel');
+                            } else {
+                                showOrHideErrorMsgCommon('Review & rating saved', true, 'saveReviewError');
+                                window.setTimeout(function() {
+                                    // 14-Sep-21: Sometimes modal is not closed even after calling reload page so close modal first then reload page.
+                                    try {
+                                        closeReviewModal();
+                                    } catch (e) {}
+                                    checkCurrentUrlAndRedirect(obj.redirect_url);
+                                }, 1500);
+                            }
+                        } else if (obj.status == 'ERROR') {
+                            showValidationErrorMsgCommon(obj);
+                        } else if (obj.status == 'NO_ACCESS') {
+                            showOrHideErrorMsgCommon(ERROR_MSG.NO_PERMISSION_MSG, false, 'saveReviewError');
+                        }
+                    } catch (e) {
+                        hideLoaderImgAndShowBtn(imgLoaderId, btnId);
+                    }
+                },
+                complete: function() {
+
+                }
+            }); // ajax code end...
+        };
+
+
+        var saveUserReview = function() {
+            // Note: this will be applicable for payment screen only.
+            var mainTxnId = $('#mainTxnIdForReview').val();
+            //console.log('mainTxnId: ', mainTxnId);
+
+            var formData = new FormData($('form#userReviewForm')[0]);
+            $.ajax({
+                type: "POST",
+                cache: false,
+                url: REVIEW_URL_VAL.SAVE_USER_REVIEW,
+                data: formData,
+                contentType: false,
+                processData: false,
+                beforeSend: function() {
+                    showLoaderImgAndHideBtn(imgLoaderId, btnId);
+                },
+                error: function(jqXHR, textStatus, errorMessage) {
+                    alert(ERROR_MSG.AJAX_FAILED_MSG);
+                    hideLoaderImgAndShowBtn(imgLoaderId, btnId);
+                },
+                success: function(obj) {
+                    try {
+                        //console.log('hideTutorPhoneEvent called, data is:', data);
+                        //var obj = JSON.parse(data);
+                        if (obj.status == 'SUCCESS') {
+
+                            // show message for normal case only.
+                            if (isBlank(obj.showLinkToReviewUs)) {
+                                $.miniNoty('Review & rating saved', 'success');
+                            }
+
+                            $('#span_review_' + mainTxnId).html(obj.editReviewBtn);
+                            hideLoaderImgAndShowBtn(imgLoaderId, btnId);
+                            closeReviewModal();
+
+
+                            if (isNotBlank(obj.showLinkToReviewUs) && obj.showLinkToReviewUs == 'Y') {
+                                $("#askToReviewUs_redirectUrl").val("");
+                                openModalCommon('askToReviewTeacherOnModel');
+                            }
+
+                        } else if (obj.status == 'ERROR') {
+                            showValidationErrorMsgCommon(obj);
+                        } else if (obj.status == 'NO_ACCESS') {
+                            showOrHideErrorMsgCommon(ERROR_MSG.NO_PERMISSION_MSG, false, 'saveReviewError');
+                        }
+                    } catch (e) {
+                        hideLoaderImgAndShowBtn(imgLoaderId, btnId);
+                    }
+                },
+                complete: function() {
+
+                }
+            }); // ajax code end...
+        };
+
+        var showValidationErrorMsgCommon = function(obj) {
+            // if it have error message with redirect url, special case: when user direct add review 2 times from 2 screen
+            if (isNotBlank(obj.redirect_url) && isNotBlank(obj.ERROR_MSG)) {
+                // show error message, wait for some time and redirect to the screen
+                showOrHideErrorMsgCommon(obj.ERROR_MSG, false, 'saveReviewError');
+                window.setTimeout(function() {
+                    checkCurrentUrlAndRedirect(obj.redirect_url);
+                }, 1500);
+            } else if (isNotBlank(obj.redirect_url)) {
+                checkCurrentUrlAndRedirect(obj.redirect_url);
+            } else if (isNotBlank(obj.action) && obj.action == 'SELECT_RATING') {
+                $('#ratingErrorMsg').show();
+                // scroll to the rating UI
+                document.location.href = "#rateYo";
+            } else if (isNotBlank(obj.action) && obj.action == 'REQ_HEADING') {
+                showOrHideErrorMsgCommon(req_heading_error, false, 'reviewHeadingErrorMsg');
+                $('#reviewHeading').focus();
+            } else if (isNotBlank(obj.action) && obj.action == 'REQ_REVIEW') {
+                showOrHideErrorMsgCommon(req_review_error, false, 'reviewErrorMsg');
+                $('#userReview').focus();
+            } else if (isNotBlank(obj.ERROR_MSG)) {
+                showOrHideErrorMsgCommon(obj.ERROR_MSG, false, 'saveReviewError');
+            }
+            hideLoaderImgAndShowBtn(imgLoaderId, btnId);
+        };
+
+        var updateUserReview = function() {
+            var formData = new FormData($('form#userReviewForm')[0]);
+            $.ajax({
+                type: "POST",
+                cache: false,
+                url: REVIEW_URL_VAL.UPDATE_REVIEW,
+                data: formData,
+                contentType: false,
+                processData: false,
+                beforeSend: function() {
+                    showLoaderImgAndHideBtn(imgLoaderId, btnId);
+                },
+                error: function(jqXHR, textStatus, errorMessage) {
+                    alert(ERROR_MSG.AJAX_FAILED_MSG);
+                    hideLoaderImgAndShowBtn(imgLoaderId, btnId);
+                },
+                success: function(obj) {
+                    try {
+                        //console.log('hideTutorPhoneEvent called, data is:', data);
+                        //var obj = JSON.parse(data);
+                        if (obj.status == 'SUCCESS') {
+                            showOrHideErrorMsgCommon('Review updated', true, 'saveReviewError');
+
+                            window.setTimeout(function() {
+                                checkCurrentUrlAndRedirect(obj.redirect_url);
+                            }, 1500);
+
+                        } else if (obj.status == 'ERROR') {
+                            showValidationErrorMsgCommon(obj);
+                        } else if (obj.status == 'NO_ACCESS') {
+                            showOrHideErrorMsgCommon(ERROR_MSG.NO_PERMISSION_MSG, false, 'saveReviewError');
+                        }
+                    } catch (e) {
+                        hideLoaderImgAndShowBtn(imgLoaderId, btnId);
+                    }
+                },
+                complete: function() {
+
+                }
+            }); // ajax code end...
+        };
+
+        // access by agent to update the review
+        var changeShowReview = function(reviewId, showReviewVal, showReviewDivId) {
+            $.ajax({
+                type: "GET",
+                cache: false,
+                url: REVIEW_URL_VAL.SHOW_OR_HIDE_USER_REVIEW + "?id=" + reviewId + "&showReview=" + showReviewVal,
+                dataType: 'json',
+                beforeSend: function() {
+
+                },
+                error: function(jqXHR, textStatus, errorMessage) {
+                    alert(ERROR_MSG.AJAX_FAILED_MSG);
+                },
+                success: function(obj) {
+                    try {
+                        //console.log('hideTutorPhoneEvent called, data is:', data);
+                        //var obj = JSON.parse(data);
+                        if (obj.status == 'SUCCESS') {
+                            $.miniNoty(obj.msg, 'success');
+                            $('#' + showReviewDivId).html(obj.showReviewLink);
+                        } else if (obj.status == 'ERROR') {
+                            $.miniNoty(obj.ERROR_MSG, 'error');
+                        } else if (obj.status == 'NO_ACCESS') {
+                            $.miniNoty(ERROR_MSG.NO_PERMISSION_MSG, 'error');
+                        }
+                    } catch (e) {
+
+                    }
+                },
+                complete: function() {
+
+                }
+            }); // ajax code end...
+        };
+
+        var checkCurrentUrlAndRedirect = function(redirect_url) {
+            // issue: when on same url and it contains hastag then redirect is not working. e.g. http://localhost:8080/teacheron/tutor-profile/14#r36
+            // when on different url and we use window.reload() it use same url to redirect again and again e.g. http://localhost:8080/teacheron/manageMyReviews?reviewId=36&redirectTid=14&flow=edit
+            // however it should redirect to tutorProfile page.
+            // solution: checking url and redirect accordingly.
+            var isSameUrl = 1;
+            try {
+                if (redirect_url.indexOf(window.location.href) == 0) {
+                    isSameUrl = 0;
+                }
+                if (isSameUrl == 1 && tutorProfileUrlForReviewRedirect != '' && redirect_url.indexOf(tutorProfileUrlForReviewRedirect)) {
+                    isSameUrl = 0;
+                }
+            } catch (e) {
+                console.log('error: checkCurrentUrlAndRedirect()', e);
+            }
+            window.location.href = redirect_url;
+            // if required only when on same url and hashtag found
+            if (isSameUrl == 0) {
+                location.reload();
+            }
+        };
+
+
+        var setRating = function(rating) {
+            var $rateYo = $("#rateYo").rateYo();
+            $rateYo.rateYo("rating", rating);
+
+            // if rating is not blank and we are restting it to zero then hide error message.
+            // This is used to reset previous error when opening modal again.
+            if (isNotBlank(rating) && rating == 0) {
+                $('#ratingErrorMsg').hide();
+            }
+        };
+
+        // 12-Mar-20: it will be called from payment.jsp file and if same student made 2 payments to the tutor and provided review to first payment.
+        // when student try to provide review to the second payment it should check it and redirect to the preview review edit page because from now
+        // we are maintaining 1-1 review only and removing flow to take multiple reviews.
+        var checkForRedirectOrOpenModal = function(mainTxnId) {
+            $.ajax({
+                type: "GET",
+                cache: false,
+                url: REVIEW_URL_VAL.CHECK_IF_REVIEW_PROVIDED_EARLIER + "?mainTxnId=" + mainTxnId,
+                dataType: 'json',
+                beforeSend: function() {
+
+                },
+                error: function(jqXHR, textStatus, errorMessage) {
+                    window.location.reload();
+                },
+                success: function(obj) {
+                    //var obj = JSON.parse(data);
+                    if (obj.status == 'SUCCESS') {
+                        if (obj.action == 'OPEN_MODAL') {
+                            openReviewModal(mainTxnId);
+                        } else if (obj.action == 'REDIRECT') {
+                            window.location.href = obj.redirect_url;
+                        }
+                    } else if (obj.status == 'ERROR') {
+                        if (isNotBlank(obj.ERROR_MSG)) {
+                            // if payment is done but not release then show error message.
+                            $.miniNoty(obj.ERROR_MSG, 'error');
+                        } else if (isNotBlank(obj.action) && obj.action == 'RELOAD_PAGE') {
+                            window.location.reload();
+                        }
+                    }
+                },
+                complete: function() {
+
+                }
+            });
+        };
+
+        var openReviewModal = function(mainTxnId) {
+            //alert('openReviewModal with mainTxnId: '+mainTxnId);
+            openModalCommon('reviewAndRatingMainDiv');
+            //alert('mainTxnId: '+mainTxnId);
+            $('#mainTxnIdForReview').val(mainTxnId);
+            // reset previous heading and review to blank.
+            $('#reviewHeading').val('');
+            $('#userReview').val('');
+
+            // reset textArea height which is increased by autogrow functionality. It does not affect height provided by rows. e.g. rows='4'
+            resetTextareaHeight('userReview');
+            resetFormErrorMsg('userReviewForm');
+            // it will reset review button label to 'Rate and review'
+            updateBtnLabelChangeOrUpdateReview('add');
+            // set rating 0 whenever opening modal and hide error message
+            setRating(0);
+        };
+
+        var openReviewModalDirect = function() {
+            //alert('openReviewModal directly....');
+            $('#reviewAndRatingMainDiv').modal({
+                backdrop: 'static',
+                keyboard: false
+            });
+        };
+
+        // ---------------- API to edit review ----------------------//
+        var fetchReviewForUpdate = function(reviewId) {
+
+            // Before calling this ajax reset previous values if any
+            document.getElementById("userReviewForm").id.value = '';
+            document.getElementById('userReviewForm').userReview.value = '';
+            document.getElementById('userReviewForm').rating.value = '';
+
+            // For older record first reset it and hide it.
+            $('#reviewEscalateReason').html('');
+            $('#reviewEscalateReason').hide();
+
+
+            $.ajax({
+                type: "GET",
+                cache: false,
+                url: REVIEW_URL_VAL.FIND_REVIEW + "?reviewId=" + reviewId,
+                beforeSend: function() {
+
+                },
+                error: function(jqXHR, textStatus, errorMessage) {
+                    alert('Could not fetch record at this time.');
+                },
+                success: function(data) {
+                    var obj = JSON.parse(data);
+                    if (obj.status == 'SUCCESS') {
+                        document.getElementById('userReviewForm').id.value = obj.id;
+                        document.getElementById('userReviewForm').reviewHeading.value = obj.heading;
+                        document.getElementById('userReviewForm').userReview.value = obj.review;
+                        document.getElementById('userReviewForm').rating.value = obj.rating;
+
+                        // if user is admin/agent then it will have review status data.
+                        if (isNotBlank(obj.reviewStatus)) {
+                            document.getElementById('userReviewForm').reviewStatus.value = obj.reviewStatus;
+                        }
+                        if (isNotBlank(obj.showReview)) {
+                            if (obj.showReview == true) {
+                                document.getElementById('userReviewForm').rdoShowReviewYes.checked = true;
+                            } else {
+                                document.getElementById('userReviewForm').rdoShowReviewNo.checked = true;
+                            }
+                        }
+
+                        if (isNotBlank(obj.fromUserEmail) && isNotBlank(obj.toUserEmail)) {
+                            $('#fromUserEmailVal').html(obj.fromUserEmail);
+                            $('#toUserEmailVal').html(obj.toUserEmail);
+                            if (isNotBlank(obj.sendEmailTxt)) {
+                                $('#sendEmailTxtBtn').html(obj.sendEmailTxt);
+                            }
+                            $('#userEmailDiv').show();
+                        }
+
+
+
+                        if (isNotBlank(obj.reviewEscalateReason)) {
+                            $('#reviewEscalateReason').html("<b class='color-red'>Review escalate reason: </b><br/>" + obj.reviewEscalateReason);
+                            $('#reviewEscalateReason').show();
+                        }
+
+
+                        reviewFlow = 'update'; // setting this to update.
+                        setRating(obj.rating);
+                        // during update operation changed review button label to 'Update rate and review'
+                        updateBtnLabelChangeOrUpdateReview('update');
+                        openReviewModalDirect();
+                    } else if (obj.status == 'ERROR') {
+                        if (isNotBlank(obj.action) && obj.action == 'NO_ACCESS') {
+                            $.miniNoty('You don\'t have permission to edit review', 'error');
+                        } else if (isNotBlank(obj.action) && obj.action == 'REVIEW_NOT_FOUND') {
+                            $.miniNoty('No review found to edit', 'error');
+                        } else {
+                            $.miniNoty('Could not update review at this time. Please try later.', 'error');
+                        }
+                    }
+                },
+                complete: function() {
+
+                }
+            });
+        };
+
+
+        // ---------------- JQuery Ready code START ----------------------
+        jQuery(document).ready(function() {
+            UserReviewFormVal.initValidation();
+
+            // Reference: https://rateyo.fundoocode.ninja/#installation
+            $("#rateYo").rateYo({
+                //rating: 1,  // for the default selected field.
+                fullStar: true, // for the full star.
+                //starWidth: "40px", // default size: 18px,
+                //normalFill: "#A0A0A0", // define colors for empty (non selected) stars,
+                ratedFill: "#72c02c", // defines the colors of fill stars,
+                // numStars: 5, // define number of stars
+                spacing: "5px",
+                // readOnly: true, // Make rating readonly
+                onSet: function(rating, rateYoInstance) {
+                    $('#rating').val(rating);
+                    // hide error message related to ratings
+                    validateStarRating(false);
+                }
+                // readOnly: true
+                // 22-Nov-19: For agent disable it
+
+
+
+                /*onChange: function (rating, rateYoInstance) {
+                 $(this).next().text(rating);
+                 }*/
+            });
+
+            // validate max characters for review heading
+            $("#reviewHeading").MaxLength({
+                MaxLength: 100,
+                CharacterCountControl: $('#reviewHeadingCount')
+            });
+
+            // validation for max characters for user review
+            $("#userReview").MaxLength({
+                MaxLength: 2500,
+                CharacterCountControl: $('#userReviewCount')
+            });
+
+
+
+            $("#askToReviewUs_closeBtn").click(function() {
+                // Close model for all case and reload page if it is tutorSearch flow.
+                closeModalCommon('askToReviewTeacherOnModel');
+                var redirectUrl = $("#askToReviewUs_redirectUrl").val();
+                if (isNotBlank(redirectUrl)) {
+                    checkCurrentUrlAndRedirect(redirectUrl);
+                }
+            });
+
+        }); // JQuery on load end
+    </script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            // App.init();
+
+
+            // below is the encry userId
+
+
+
+
+
+
+        });
+    </script>
+
+
+    <script>
+        /*var csrf_token = $("meta[name='_csrf']").attr("content");
+            var csrf_header = $("meta[name='_csrf_header']").attr("content");
+            
+            $(document).ajaxSend(function(e, xhr, options) {
+                console.log(' --- csrf ajax call --- ');
+                xhr.setRequestHeader(csrf_header, csrf_token);
+            });*/
+
+        var csrf_token;
+        var csrf_header;
+
+        function waitForJquery_csrf() {
+            if (typeof $ !== "undefined") {
+                csrf_token = $("meta[name='_csrf']").attr("content");
+                csrf_header = $("meta[name='_csrf_header']").attr("content");
+
+
+                $(document).ajaxSend(function(e, xhr, options) {
+                    //console.log(' --- csrf ajax call --- ');
+                    xhr.setRequestHeader(csrf_header, csrf_token);
+                });
+
+                $(".clsCloseStoreLaunchNotificationToTutor").click(function() {
+                    $(".clsStoreNotificationDiv").hide();
+                    $.ajax({
+                        type: "GET",
+                        url: getAppContext() + 'markStoreNotificationRead',
+                        cache: false,
+                        error: function(jqXHR, textStatus, errorMessage) {
+
+                        },
+                        success: function(data) {
+
+                        }
+                    }); // Ajax end
+                });
+
+            } else {
+                setTimeout(waitForJquery_csrf, 50);
+            }
+        }
+        waitForJquery_csrf();
+    </script>
+
+</body>
+
+</html>
